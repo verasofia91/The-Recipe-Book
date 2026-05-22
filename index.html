@@ -368,7 +368,7 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
 <div class="tabs-bar" id="tabsBar">
   <div class="tabs-inner" id="tabsInner">
       <button class="tab-btn active" onclick="setTab('All')">
-        All&nbsp;<span class="tab-count">16</span>
+        All&nbsp;<span class="tab-count">17</span>
       </button>
       <button class="tab-btn " onclick="setTab('Breakfast')">
         Breakfast&nbsp;<span class="tab-count">1</span>
@@ -377,10 +377,10 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
         Lunch&nbsp;<span class="tab-count">3</span>
       </button>
       <button class="tab-btn " onclick="setTab('Dinner')">
-        Dinner&nbsp;<span class="tab-count">6</span>
+        Dinner&nbsp;<span class="tab-count">5</span>
       </button>
       <button class="tab-btn " onclick="setTab('Desserts')">
-        Desserts&nbsp;<span class="tab-count">1</span>
+        Desserts&nbsp;<span class="tab-count">3</span>
       </button>
       <button class="tab-btn " onclick="setTab('Drinks')">
         Drinks&nbsp;<span class="tab-count">1</span>
@@ -397,7 +397,7 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
 <main class="main">
   <div class="section-header" style="">
     <h2 class="section-title" id="sectionTitle">All Recipes</h2>
-    <span class="section-meta" id="recipeCount">16 Recipes</span>
+    <span class="section-meta" id="recipeCount">17 Recipes</span>
   </div>
   <div class="recipe-grid" id="recipeGrid" style="">
     <div class="recipe-card" onclick="viewRecipe(1)">
@@ -509,20 +509,20 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
       </div>
     </div>
     <div class="recipe-card" onclick="viewRecipe(11)">
-      <img class="card-img" src="https://www.sugarsaltmagic.com/wp-content/uploads/2024/01/Chicken-Filo-Pie-1FEAT.jpg" alt="Chicken Filo Pie">
+      <img class="card-img" src="https://i.pinimg.com/564x/49/33/fd/4933fd92d92968dd842bdd3c4d16cbd9.jpg" alt="Docinhos de Côco">
       <div class="card-top">
         <div class="card-number">07</div>
         <div class="card-emoji">🍽️</div>
       </div>
       <div class="card-body">
-        <div class="card-category">Dinner</div>
-        <div class="card-name">Chicken Filo Pie</div>
-        <div class="card-tags"><span class="card-tag">greek</span><span class="card-tag">oven</span><span class="card-tag">onepot</span></div>
+        <div class="card-category">Desserts</div>
+        <div class="card-name">Docinhos de Côco</div>
+        <div class="card-tags"><span class="card-tag">português</span><span class="card-tag">easy</span></div>
         <div class="card-divider"></div>
         <div class="card-stats">
-          <div class="card-stat"><div class="stat-label">Time</div><div class="stat-val">Oven 180°C  |  30 mins</div></div>
-          
-          <div class="card-stat"><div class="stat-label">Ingr.</div><div class="stat-val">16</div></div>
+          <div class="card-stat"><div class="stat-label">Time</div><div class="stat-val">15 mins</div></div>
+          <div class="card-stat"><div class="stat-label">Serves</div><div class="stat-val">Family</div></div>
+          <div class="card-stat"><div class="stat-label">Ingr.</div><div class="stat-val">5</div></div>
         </div>
       </div>
     </div>
@@ -687,6 +687,24 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
           <div class="card-stat"><div class="stat-label">Ingr.</div><div class="stat-val">12</div></div>
         </div>
       </div>
+    </div>
+    <div class="recipe-card" onclick="viewRecipe(11)">
+      
+      <div class="card-top">
+        <div class="card-number">17</div>
+        <div class="card-emoji">🍽️</div>
+      </div>
+      <div class="card-body">
+        <div class="card-category">Desserts</div>
+        <div class="card-name">Docinhos de Côco</div>
+        <div class="card-tags"><span class="card-tag">português</span><span class="card-tag">easy</span><span class="card-tag">coconut</span></div>
+        <div class="card-divider"></div>
+        <div class="card-stats">
+          <div class="card-stat"><div class="stat-label">Time</div><div class="stat-val">15 mins</div></div>
+          <div class="card-stat"><div class="stat-label">Serves</div><div class="stat-val">Family</div></div>
+          <div class="card-stat"><div class="stat-label">Ingr.</div><div class="stat-val">5</div></div>
+        </div>
+      </div>
     </div></div>
 
   <!-- MEAL PLANNER PAGE -->
@@ -765,7 +783,7 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
         <h3 style="margin-bottom: 16px; font-size: 0.9rem; font-family: 'Barlow Condensed', sans-serif; letter-spacing: 2px; text-transform: uppercase; color: var(--mid-grey);">Add Item</h3>
         <div class="form-row">
           <input type="text" id="pantryItemName" class="form-input" placeholder="Item name (e.g., Pasta)">
-          <select id="pantryItemGroup" class="form-input"><option value="">Select group...</option><option value="new">+ Create new group</option><option value="Laundry">Laundry</option><option value="Pantry">Pantry</option></select>
+          <select id="pantryItemGroup" class="form-input"><option value="">Select group...</option><option value="new">+ Create new group</option><option value="Pantry">Pantry</option></select>
         </div>
         <div class="form-row">
           <input type="number" id="pantryItemQuantity" class="form-input" placeholder="Quantity (e.g., 2)" step="0.01" min="1">
@@ -790,69 +808,6 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
       <div id="groupsContainer">
       <div style="margin-bottom: 30px;">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid var(--rule);">
-          <h3 style="font-size: 1rem; font-family: 'Barlow Condensed', sans-serif; letter-spacing: 2px; text-transform: uppercase; color: var(--mid-grey); margin: 0;">Laundry</h3>
-          <div style="display: flex; gap: 8px;">
-            <button onclick="renameGroup('Laundry')" class="btn btn-ghost">Rename</button>
-            <button onclick="deleteGroup('Laundry')" class="btn btn-delete">Delete</button>
-          </div>
-        </div>
-        <div class="pantry-grid">
-          
-            <div class="pantry-item">
-              <div class="pantry-item-header">
-                <div>
-                  <div class="pantry-item-name">Laundry Powder</div>
-                  <div style="font-size: 0.8rem; color: var(--mid-grey); margin-top: 4px;">2 Box</div>
-                </div>
-                <button class="btn btn-delete btn-sm" onclick="removePantryItem(1779427059905)">Remove</button>
-              </div>
-              <div class="pantry-amount" style="margin-bottom: 12px;">Used: 0.5 of 2</div>
-              <div class="pantry-progress-bar">
-                <div class="pantry-progress-fill" style="width: 25%"></div>
-              </div>
-              <div class="pantry-controls">
-                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1779427059905, -0.25)">-0.25</button>
-                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1779427059905, -0.5)">-0.5</button>
-                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1779427059905, 0.5)">+0.5</button>
-                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1779427059905, 0.25)">+0.25</button>
-              </div>
-              <div style="margin-top: 12px; display: flex; gap: 6px;">
-                <input type="number" id="custom-1779427059905" placeholder="Used amount" step="0.01" min="0" style="flex: 1; padding: 8px; border: 1px solid #ddd; border-radius: 3px; font-size: 0.85rem;">
-                <button onclick="setCustomQuantityUsed(1779427059905)" class="btn btn-ghost btn-sm">Set</button>
-              </div>
-              <button onclick="editItem(1779427059905)" class="btn btn-ghost" style="width: 100%; justify-content: center; margin-top: 12px;">Edit Item</button>
-            </div>
-          
-            <div class="pantry-item">
-              <div class="pantry-item-header">
-                <div>
-                  <div class="pantry-item-name">Fabric Softener</div>
-                  <div style="font-size: 0.8rem; color: var(--mid-grey); margin-top: 4px;">2 Bottles</div>
-                </div>
-                <button class="btn btn-delete btn-sm" onclick="removePantryItem(1779428460062)">Remove</button>
-              </div>
-              <div class="pantry-amount" style="margin-bottom: 12px;">Used: 1 of 2</div>
-              <div class="pantry-progress-bar">
-                <div class="pantry-progress-fill" style="width: 50%"></div>
-              </div>
-              <div class="pantry-controls">
-                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1779428460062, -0.25)">-0.25</button>
-                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1779428460062, -0.5)">-0.5</button>
-                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1779428460062, 0.5)">+0.5</button>
-                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1779428460062, 0.25)">+0.25</button>
-              </div>
-              <div style="margin-top: 12px; display: flex; gap: 6px;">
-                <input type="number" id="custom-1779428460062" placeholder="Used amount" step="0.01" min="0" style="flex: 1; padding: 8px; border: 1px solid #ddd; border-radius: 3px; font-size: 0.85rem;">
-                <button onclick="setCustomQuantityUsed(1779428460062)" class="btn btn-ghost btn-sm">Set</button>
-              </div>
-              <button onclick="editItem(1779428460062)" class="btn btn-ghost" style="width: 100%; justify-content: center; margin-top: 12px;">Edit Item</button>
-            </div>
-          
-        </div>
-      </div>
-    
-      <div style="margin-bottom: 30px;">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid var(--rule);">
           <h3 style="font-size: 1rem; font-family: 'Barlow Condensed', sans-serif; letter-spacing: 2px; text-transform: uppercase; color: var(--mid-grey); margin: 0;">Pantry</h3>
           <div style="display: flex; gap: 8px;">
             <button onclick="renameGroup('Pantry')" class="btn btn-ghost">Rename</button>
@@ -867,23 +822,23 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
                   <div class="pantry-item-name">Spaghetti</div>
                   <div style="font-size: 0.8rem; color: var(--mid-grey); margin-top: 4px;">1 Packet</div>
                 </div>
-                <button class="btn btn-delete btn-sm" onclick="removePantryItem(1779427152783)">Remove</button>
+                <button class="btn btn-delete btn-sm" onclick="removePantryItem(1779436208808)">Remove</button>
               </div>
               <div class="pantry-amount" style="margin-bottom: 12px;">Used: 0.5 of 1</div>
               <div class="pantry-progress-bar">
                 <div class="pantry-progress-fill" style="width: 50%"></div>
               </div>
               <div class="pantry-controls">
-                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1779427152783, -0.25)">-0.25</button>
-                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1779427152783, -0.5)">-0.5</button>
-                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1779427152783, 0.5)">+0.5</button>
-                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1779427152783, 0.25)">+0.25</button>
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1779436208808, -0.25)">-0.25</button>
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1779436208808, -0.5)">-0.5</button>
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1779436208808, 0.5)">+0.5</button>
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1779436208808, 0.25)">+0.25</button>
               </div>
               <div style="margin-top: 12px; display: flex; gap: 6px;">
-                <input type="number" id="custom-1779427152783" placeholder="Used amount" step="0.01" min="0" style="flex: 1; padding: 8px; border: 1px solid #ddd; border-radius: 3px; font-size: 0.85rem;">
-                <button onclick="setCustomQuantityUsed(1779427152783)" class="btn btn-ghost btn-sm">Set</button>
+                <input type="number" id="custom-1779436208808" placeholder="Used amount" step="0.01" min="0" style="flex: 1; padding: 8px; border: 1px solid #ddd; border-radius: 3px; font-size: 0.85rem;">
+                <button onclick="setCustomQuantityUsed(1779436208808)" class="btn btn-ghost btn-sm">Set</button>
               </div>
-              <button onclick="editItem(1779427152783)" class="btn btn-ghost" style="width: 100%; justify-content: center; margin-top: 12px;">Edit Item</button>
+              <button onclick="editItem(1779436208808)" class="btn btn-ghost" style="width: 100%; justify-content: center; margin-top: 12px;">Edit Item</button>
             </div>
           
         </div>
@@ -919,7 +874,7 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
 
       <div class="wine-grid" id="wineGrid">
     <div class="wine-card">
-      <img src="https://shop.coles.com.au/wcsstore/Coles-CAS/images/8/2/5/8258524-zm.jpg" class="wine-image" alt="Oyster Bay" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22280%22 height=%22200%22%3E%3Crect fill=%22%23f0f0f0%22 width=%22280%22 height=%22200%22/%3E%3C/svg%3E'">
+      <img src="https://imagevault.skulibrary.com/ColesLiquor/NoPrefix/e2520ee2b408c79be0916bdd062e372f1423c031/images/2400/id/CLG-8258524-1.jpg" class="wine-image" alt="Oyster Bay" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22280%22 height=%22200%22%3E%3Crect fill=%22%23f0f0f0%22 width=%22280%22 height=%22200%22/%3E%3C/svg%3E'">
       <div class="wine-card-body">
         <div class="wine-name">Oyster Bay</div>
         <div class="wine-type">Chardonnay</div>
@@ -927,10 +882,10 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
           <div class="wine-price">$23</div>
           
         </div>
-        <div class="wine-notes">Favourite white wine. Goes well with everything.</div>
+        <div class="wine-notes">Best. goes with everything.</div>
         <div class="wine-actions">
-          <button onclick="editWine(1779427927524)" class="btn btn-ghost btn-sm" style="flex: 1; justify-content: center;">Edit</button>
-          <button onclick="deleteWine(1779427927524)" class="btn btn-delete btn-sm" style="flex: 1; justify-content: center;">Delete</button>
+          <button onclick="editWine(1779435307655)" class="btn btn-ghost btn-sm" style="flex: 1; justify-content: center;">Edit</button>
+          <button onclick="deleteWine(1779435307655)" class="btn btn-delete btn-sm" style="flex: 1; justify-content: center;">Delete</button>
         </div>
       </div>
     </div>
@@ -943,21 +898,21 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
 <!-- VIEW MODAL -->
 <div class="overlay" id="viewOverlay" onclick="closeOverlay('viewOverlay',event)">
   <div class="modal" id="viewModal">
-    <div id="viewHeroWrap"><img class="modal-hero-img" src="https://thewoksoflife.com/wp-content/uploads/2019/08/ginger-scallion-chicken-12.jpg" alt="Ginger Scallion Steamed Chicken"></div>
+    <div id="viewHeroWrap"><img class="modal-hero-img" src="https://i.pinimg.com/564x/49/33/fd/4933fd92d92968dd842bdd3c4d16cbd9.jpg" alt="Capela"></div>
     <div class="modal-band">
       <div class="modal-band-left">
-        <div class="modal-cat" id="viewCat">Lunch</div>
-        <div class="modal-name" id="viewName">Ginger Scallion Steamed Chicken</div>
-        <div class="modal-tags" id="viewTags"><span class="modal-tag">chinese</span><span class="modal-tag">steam</span><span class="modal-tag">rice</span><span class="modal-tag">easy</span></div>
+        <div class="modal-cat" id="viewCat">Desserts</div>
+        <div class="modal-name" id="viewName">Capela</div>
+        <div class="modal-tags" id="viewTags"><span class="modal-tag">português</span><span class="modal-tag">easy</span></div>
       </div>
-      <div class="modal-emoji-large" id="viewEmoji" style="display: none;"></div>
+      <div class="modal-emoji-large" id="viewEmoji" style="display: none;">🍽️</div>
       <button class="modal-close" onclick="document.getElementById('viewOverlay').classList.remove('open')">✕</button>
     </div>
-    <div class="modal-stats-bar" id="viewStats"><div class="mstat"><div class="mstat-label">Serves</div><div class="mstat-val">2</div></div><div class="mstat"><div class="mstat-label">Ingredients</div><div class="mstat-val">9 items</div></div><div class="mstat"><div class="mstat-label">Steps</div><div class="mstat-val">4 steps</div></div></div>
+    <div class="modal-stats-bar" id="viewStats"><div class="mstat"><div class="mstat-label">Time</div><div class="mstat-val">15 mins</div></div><div class="mstat"><div class="mstat-label">Serves</div><div class="mstat-val">Family</div></div><div class="mstat"><div class="mstat-label">Ingredients</div><div class="mstat-val">5 items</div></div><div class="mstat"><div class="mstat-label">Steps</div><div class="mstat-val">6 steps</div></div></div>
     <div class="modal-body">
       <div class="modal-section">
         <div class="modal-section-label">Ingredients</div>
-        <ul class="ingredients-list" id="viewIngredients"><li>4 bone in, skin on chicken thighs</li><li>OR 2 chicken maryland</li><li>2 knobs of ginger — sliced and minced</li><li>6 spring onion — separate</li><li>2 tbsp soy cause</li><li>1 tbsp oyster sauce</li><li>1 tbsp sambal (optional)</li><li>4 tbsp oil</li><li>1 small bowl for steaming</li></ul>
+        <ul class="ingredients-list" id="viewIngredients"><li>250g açúcar</li><li>300g côco ralado</li><li>4 ovos</li><li>2 tbsp maizena</li><li>Papelinhos mini cupcake</li></ul>
       </div>
       <div class="modal-section" id="viewVideoSection" style="display: none;">
         <div class="modal-section-label">Video</div>
@@ -966,14 +921,16 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
       <div class="modal-section">
         <div class="modal-section-label">Method</div>
         <ul class="steps-list" id="viewSteps">
-    <li class="step-item"><span class="step-n">01</span><span class="step-text">In a wide pot place a plate big enough to fit chicken and the bowl, place the bowl upside down in the centre of the plate and arrange the chicken, ginger slices and white spring onion around it, tucking some under the meat. Pour hot water in the pot only, turn on the heat, cover and steam for ~20 minutes. Make sure water is boiling before returning the lid.</span></li>
-    <li class="step-item"><span class="step-n">02</span><span class="step-text">After 20 minutes, the biowl will be filled with liquid gold. Remove chicken and shred it with your hands or slice into strips. Make sure to include the skin. Gently lift the bowl, so the liquid gets released. Set aside.</span></li>
-    <li class="step-item"><span class="step-n">03</span><span class="step-text">Heat up some oil and pour over the minced ginger and spring onion. Add the sauces and liquid gold to the mixture, and stir.</span></li>
-    <li class="step-item"><span class="step-n">04</span><span class="step-text">Serve on a bed of white rice and be generous with the sauce!</span></li></ul>
+    <li class="step-item"><span class="step-n">01</span><span class="step-text">Pré aquecer o forno a 180°C.</span></li>
+    <li class="step-item"><span class="step-n">02</span><span class="step-text">Misturar os ovos com o açúcar. Não é preciso mexer muito.</span></li>
+    <li class="step-item"><span class="step-n">03</span><span class="step-text">Adicionar a maizena e misturar.</span></li>
+    <li class="step-item"><span class="step-n">04</span><span class="step-text">Envolver o côco ralado.</span></li>
+    <li class="step-item"><span class="step-n">05</span><span class="step-text">Dividir por papelinhos mini cupcake.</span></li>
+    <li class="step-item"><span class="step-n">06</span><span class="step-text">Cozer por 10 minutos.</span></li></ul>
       </div>
-      <div class="modal-section" id="viewNotesSection" style="">
+      <div class="modal-section" id="viewNotesSection" style="display: none;">
         <div class="modal-section-label">Notes</div>
-        <div class="notes-text" id="viewNotes">Goes well with choy sum, chinese brocolli and rice.</div>
+        <div class="notes-text" id="viewNotes">Freeze in batches to have when you're sick. Goes well with salted roasted peanuts.</div>
       </div>
       <div class="modal-footer">
         <div class="modal-footer-left">
@@ -994,8 +951,8 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
   <div class="form-modal">
     <div class="form-header">
       <div>
-        <div class="form-header-label" id="formLabel">New Recipe</div>
-        <h2 id="formTitle">Add to Collection</h2>
+        <div class="form-header-label" id="formLabel">Edit Recipe</div>
+        <h2 id="formTitle">Capela</h2>
       </div>
       <button class="modal-close" style="position:static;" onclick="document.getElementById('addOverlay').classList.remove('open')">✕</button>
     </div>
@@ -1005,7 +962,7 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
         <label>Header Image URL (optional)</label>
         <input type="url" id="fImageUrl" placeholder="https://example.com/image.jpg" onchange="handleImageUrlChange()" style="font-size:0.78rem;padding:8px 0;background:none;border:none;border-bottom:1.5px solid var(--rule);color:var(--mid-grey)">
         <div class="img-preview-wrap" id="imgPreviewWrap" style="">
-          <img id="imgPreview" class="img-preview" src="https://ychef.files.bbci.co.uk/1280x640/p0fwvtbm.jpeg" alt="Preview">
+          <img id="imgPreview" class="img-preview" src="https://i.pinimg.com/564x/49/33/fd/4933fd92d92968dd842bdd3c4d16cbd9.jpg" alt="Preview">
           <button class="img-clear-btn" onclick="clearImage()">✕ Remove image</button>
         </div>
       </div>
@@ -1071,7 +1028,7 @@ Meanwhile, warm olive oil over medium heat."></textarea>
     </div>
     <div class="form-footer">
       <button class="btn btn-ghost" onclick="document.getElementById('addOverlay').classList.remove('open')">Cancel</button>
-      <button class="btn btn-black" id="formSaveBtn" onclick="saveRecipe()">Save Recipe</button>
+      <button class="btn btn-black" id="formSaveBtn" onclick="saveRecipe()">Update Recipe</button>
     </div>
   </div>
 </div>
@@ -1113,7 +1070,7 @@ Meanwhile, warm olive oil over medium heat."></textarea>
 
 <!-- SAVE TOAST -->
 <div class="save-toast show" id="saveToast">
-  <div class="toast-text"><strong id="toastTitle">Recipe Added</strong><span id="toastMsg">Save your book to keep changes.</span></div>
+  <div class="toast-text"><strong id="toastTitle">Recipe Updated</strong><span id="toastMsg">Save your book to keep changes.</span></div>
   <button class="btn btn-black btn-sm" onclick="exportBook()">↓ Save File</button>
   <button onclick="document.getElementById('saveToast').classList.remove('show')" style="background:none;border:none;color:#666;cursor:pointer;font-size:0.9rem;padding:0 0 0 4px">✕</button>
 </div>
@@ -1330,49 +1287,30 @@ let recipes = [
   {
     "id": 11,
     "emoji": "🍽️",
-    "name": "Chicken Filo Pie",
-    "category": "Dinner",
-    "time": "Oven 180°C  |  30 mins",
-    "servings": "",
+    "name": "Docinhos de Côco",
+    "category": "Desserts",
+    "time": "15 mins",
+    "servings": "Family",
     "tags": [
-      "greek",
-      "oven",
-      "onepot"
+      "português",
+      "easy"
     ],
-    "videoUrl": "https://www.tiktok.com/@kalscookingpot/video/7397496679680707873?is_from_webapp=1&sender_device=pc",
-    "imageData": "https://www.sugarsaltmagic.com/wp-content/uploads/2024/01/Chicken-Filo-Pie-1FEAT.jpg",
+    "videoUrl": "",
+    "imageData": "https://i.pinimg.com/564x/49/33/fd/4933fd92d92968dd842bdd3c4d16cbd9.jpg",
     "ingredients": [
-      "1kg chicken thigh cubed",
-      "2 medium onions",
-      "Salt & pepper",
-      "1 tsp smoked paprika",
-      "1 tsp thyme",
-      "Parsley",
-      "2 garlic cloves minced",
-      "25g butter",
-      "3 tbsp flour",
-      "250ml chicken stock",
-      "1 cup cream",
-      "1/3 cup greek yoghurt",
-      "200g spinach",
-      "200g feta cheese",
-      "1 box  filo sheets",
-      "50g butter (to finish)"
+      "250g açúcar",
+      "300g côco ralado",
+      "4 ovos",
+      "2 tbsp maizena",
+      "Papelinhos mini cupcake"
     ],
     "steps": [
-      "Preheat over to 180°C.",
-      "Heat some oil into a oven proof pan (dutch oven) and sauté onions until golden.",
-      "Add chicken and cook until colour changes, then add the spices. Cook on high for a few minutes until the chicken juices come out. Cover and simmer for 5 minutes,",
-      "Uncover and allow chicken juices to boil and reduce.",
-      "Add butter and melt in, then add flour and stir until the sauce thickens.",
-      "Pour in chicken stock, cream and greek yoghurt.",
-      "Mix well and cook on high until consistency is thicker but pourable.",
-      "Add spinach, cover and cook on medium heat until wilted.",
-      "Remove lid, stir and reduce a little further. sauce will be slightly runny and a little darker.",
-      "Leave to cool and then crumble the feta all over.",
-      "Roll up each sheet of filo into a rose and place on top of the chicken until all covered. Brush generously with butter.",
-      "Bake on 180°C for 30 minutes, or until pastry is golden and crispy.",
-      "Serve immediately."
+      "Pré aquecer o forno a 180°C.",
+      "Misturar os ovos com o açúcar. Não é preciso mexer muito.",
+      "Adicionar a maizena e misturar.",
+      "Envolver o côco ralado.",
+      "Dividir por papelinhos mini cupcake.",
+      "Cozer por 10 minutos."
     ],
     "notes": ""
   },
@@ -1717,6 +1655,35 @@ let recipes = [
       "Demolhar o pão em leite quente, passando na máquina até formar uma polpa. Refogar a cebola, chalotas e alho em azeite, junta-se-lhe fora do lume a carne de porco, chouriço, azeitonas, o pão e metade do queijo ralado, tempere-se com uma pitada de sal e pimenta, no fim junta-se 1 ovo e misturar bem.",
       "Coloca-se a mistura num pirex untado, em forma redonda, cobre-se com o toucinho. Pincelar a superfície com o ovo batido, polvilhar com pão e o resto do queijo ralado.",
       "Leva ao forno durante 30 a 45 minutos a 220°C."
+    ],
+    "notes": ""
+  },
+  {
+    "id": 11,
+    "emoji": "🍽️",
+    "name": "Docinhos de Côco",
+    "category": "Desserts",
+    "time": "15 mins",
+    "servings": "Family",
+    "tags": [
+      "português",
+      "easy",
+      "coconut"
+    ],
+    "videoUrl": "",
+    "imageData": "",
+    "ingredients": [
+      "250g açúcar",
+      "300g coco ralado",
+      "4 ovos",
+      "2 colheres de maizena",
+      "Mini cupcake cups"
+    ],
+    "steps": [
+      "Misturar os ovos com o açúcar. Não é preciso mexer muito.",
+      "Adicionar a maizena e continuar a mexer.",
+      "Envolver o coco ralado.",
+      "Dividir por papelinhos mini cupcake."
     ],
     "notes": ""
   }
@@ -2614,6 +2581,7 @@ renderTabs();
 renderGrid();
 renderShoppingPanel();
 </script>
+
 
 
 </body></html>
