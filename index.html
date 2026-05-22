@@ -1,4 +1,4 @@
-<html lang="en" style="--font-scale: 1;"><head>
+<html lang="en" style="--font-scale: 1.15;"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0, user-scalable=yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -356,7 +356,7 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
       <div class="font-size-control">
         <label for="fontSizeSlider">A</label>
         <input type="range" id="fontSizeSlider" class="font-size-slider" min="0.8" max="1.4" step="0.05" value="1" oninput="setFontSize(this.value)">
-        <span class="font-size-value" id="fontSizeValue">100%</span>
+        <span class="font-size-value" id="fontSizeValue">115%</span>
       </div>
       <button class="hbtn hbtn-ghost" onclick="toggleShoppingPanel()" title="Shopping List"><span class="btn-text">List</span></button>
       <button class="hbtn hbtn-primary" onclick="openAddModal()">+ <span class="btn-text">Recipe</span></button>
@@ -368,7 +368,7 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
 <div class="tabs-bar" id="tabsBar">
   <div class="tabs-inner" id="tabsInner">
       <button class="tab-btn active" onclick="setTab('All')">
-        All&nbsp;<span class="tab-count">17</span>
+        All&nbsp;<span class="tab-count">18</span>
       </button>
       <button class="tab-btn " onclick="setTab('Breakfast')">
         Breakfast&nbsp;<span class="tab-count">1</span>
@@ -389,7 +389,7 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
         Soups&nbsp;<span class="tab-count">3</span>
       </button>
       <button class="tab-btn " onclick="setTab('Sides')">
-        Sides&nbsp;<span class="tab-count">1</span>
+        Sides&nbsp;<span class="tab-count">2</span>
       </button></div>
   <button class="manage-cats-btn" onclick="openCatsModal()">⊞ <span class="btn-text">Categories</span></button>
 </div>
@@ -397,31 +397,13 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
 <main class="main">
   <div class="section-header" style="">
     <h2 class="section-title" id="sectionTitle">All Recipes</h2>
-    <span class="section-meta" id="recipeCount">17 Recipes</span>
+    <span class="section-meta" id="recipeCount">18 Recipes</span>
   </div>
   <div class="recipe-grid" id="recipeGrid" style="">
-    <div class="recipe-card" onclick="viewRecipe(1)">
-      
+    <div class="recipe-card" onclick="viewRecipe(2)">
+      <img class="card-img" src="https://www.recipetineats.com/tachyon/2023/01/Carbonara_6a.jpg" alt="Classic Spaghetti Carbonara" loading="lazy" onerror="this.style.display='none'">
       <div class="card-top">
         <div class="card-number">01</div>
-        <div class="card-emoji">🥞</div>
-      </div>
-      <div class="card-body">
-        <div class="card-category">Breakfast</div>
-        <div class="card-name">Fluffy Buttermilk Pancakes</div>
-        <div class="card-tags"><span class="card-tag">quick</span><span class="card-tag">vegetarian</span><span class="card-tag">weekend</span></div>
-        <div class="card-divider"></div>
-        <div class="card-stats">
-          <div class="card-stat"><div class="stat-label">Time</div><div class="stat-val">20 mins</div></div>
-          <div class="card-stat"><div class="stat-label">Serves</div><div class="stat-val">4</div></div>
-          <div class="card-stat"><div class="stat-label">Ingr.</div><div class="stat-val">8</div></div>
-        </div>
-      </div>
-    </div>
-    <div class="recipe-card" onclick="viewRecipe(2)">
-      
-      <div class="card-top">
-        <div class="card-number">02</div>
         <div class="card-emoji">🍝</div>
       </div>
       <div class="card-body">
@@ -439,7 +421,7 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
     <div class="recipe-card" onclick="viewRecipe(3)">
       
       <div class="card-top">
-        <div class="card-number">03</div>
+        <div class="card-number">02</div>
         <div class="card-emoji">🥗</div>
       </div>
       <div class="card-body">
@@ -457,7 +439,7 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
     <div class="recipe-card" onclick="viewRecipe(4)">
       
       <div class="card-top">
-        <div class="card-number">04</div>
+        <div class="card-number">03</div>
         <div class="card-emoji">🍪</div>
       </div>
       <div class="card-body">
@@ -473,9 +455,9 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
       </div>
     </div>
     <div class="recipe-card" onclick="viewRecipe(5)">
-      
+      <img class="card-img" src="https://liliebakery.fr/wp-content/uploads/2022/10/Chai-latte-recette-facile-Lilie-Bakery.jpg" alt="Spiced Chai Latte" loading="lazy" onerror="this.style.display='none'">
       <div class="card-top">
-        <div class="card-number">05</div>
+        <div class="card-number">04</div>
         <div class="card-emoji">🍵</div>
       </div>
       <div class="card-body">
@@ -490,16 +472,16 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
         </div>
       </div>
     </div>
-    <div class="recipe-card" onclick="viewRecipe(10)">
-      <img class="card-img" src="https://grantourismotravels.com/wp-content/uploads/2021/11/Spaghetti-Bolognese-Recipe-Italian-Australian-Matt-Preston-Copyright-2022-Terence-Carter-Grantourismo-T.jpg" alt="Bolognese Sauce">
+    <div class="recipe-card" onclick="viewRecipe(6)">
+      <img class="card-img" src="https://grantourismotravels.com/wp-content/uploads/2021/11/Spaghetti-Bolognese-Recipe-Italian-Australian-Matt-Preston-Copyright-2022-Terence-Carter-Grantourismo-T.jpg" alt="Bolognese Sauce" loading="lazy" onerror="this.style.display='none'">
       <div class="card-top">
-        <div class="card-number">06</div>
+        <div class="card-number">05</div>
         <div class="card-emoji">🍝</div>
       </div>
       <div class="card-body">
         <div class="card-category">Dinner</div>
         <div class="card-name">Bolognese Sauce</div>
-        <div class="card-tags"><span class="card-tag">beef</span><span class="card-tag">pasta</span><span class="card-tag">mealprep</span></div>
+        <div class="card-tags"><span class="card-tag">italian</span><span class="card-tag">beef</span><span class="card-tag">pasta</span><span class="card-tag">mealprep</span></div>
         <div class="card-divider"></div>
         <div class="card-stats">
           <div class="card-stat"><div class="stat-label">Time</div><div class="stat-val">Min. 2 hours</div></div>
@@ -508,10 +490,10 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
         </div>
       </div>
     </div>
-    <div class="recipe-card" onclick="viewRecipe(11)">
-      <img class="card-img" src="https://i.pinimg.com/564x/49/33/fd/4933fd92d92968dd842bdd3c4d16cbd9.jpg" alt="Docinhos de Côco">
+    <div class="recipe-card" onclick="viewRecipe(7)">
+      <img class="card-img" src="https://i.pinimg.com/564x/49/33/fd/4933fd92d92968dd842bdd3c4d16cbd9.jpg" alt="Docinhos de Côco" loading="lazy" onerror="this.style.display='none'">
       <div class="card-top">
-        <div class="card-number">07</div>
+        <div class="card-number">06</div>
         <div class="card-emoji">🍽️</div>
       </div>
       <div class="card-body">
@@ -526,10 +508,10 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
         </div>
       </div>
     </div>
-    <div class="recipe-card" onclick="viewRecipe(12)">
-      <img class="card-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS68Ajc-CTIc1KudL1ANOH2Al57_YUCYMT9hw&amp;s" alt="Arroz de Camarão">
+    <div class="recipe-card" onclick="viewRecipe(8)">
+      <img class="card-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS68Ajc-CTIc1KudL1ANOH2Al57_YUCYMT9hw&amp;s" alt="Arroz de Camarão" loading="lazy" onerror="this.style.display='none'">
       <div class="card-top">
-        <div class="card-number">08</div>
+        <div class="card-number">07</div>
         <div class="card-emoji">🦐</div>
       </div>
       <div class="card-body">
@@ -544,10 +526,10 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
         </div>
       </div>
     </div>
-    <div class="recipe-card" onclick="viewRecipe(13)">
-      <img class="card-img" src="https://images.getrecipekit.com/20230929194112-_dkc1555_1.jpg?aspect_ratio=4:3&amp;quality=90&amp;" alt="Pork Carnitas">
+    <div class="recipe-card" onclick="viewRecipe(9)">
+      <img class="card-img" src="https://images.getrecipekit.com/20230929194112-_dkc1555_1.jpg?aspect_ratio=4:3&amp;quality=90&amp;" alt="Pork Carnitas" loading="lazy" onerror="this.style.display='none'">
       <div class="card-top">
-        <div class="card-number">09</div>
+        <div class="card-number">08</div>
         <div class="card-emoji">🍗</div>
       </div>
       <div class="card-body">
@@ -562,10 +544,10 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
         </div>
       </div>
     </div>
-    <div class="recipe-card" onclick="viewRecipe(14)">
-      <img class="card-img" src="https://thewoksoflife.com/wp-content/uploads/2019/08/ginger-scallion-chicken-12.jpg" alt="Ginger Scallion Steamed Chicken">
+    <div class="recipe-card" onclick="viewRecipe(10)">
+      <img class="card-img" src="https://thewoksoflife.com/wp-content/uploads/2019/08/ginger-scallion-chicken-12.jpg" alt="Ginger Scallion Steamed Chicken" loading="lazy" onerror="this.style.display='none'">
       <div class="card-top">
-        <div class="card-number">10</div>
+        <div class="card-number">09</div>
         <div class="card-emoji">🍛</div>
       </div>
       <div class="card-body">
@@ -580,10 +562,10 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
         </div>
       </div>
     </div>
-    <div class="recipe-card" onclick="viewRecipe(15)">
-      <img class="card-img" src="https://pupswithchopsticks.com/wp-content/uploads/tom-yum-goong-thumbnail-500x500.jpg" alt="Tom Yum Glass Noodles">
+    <div class="recipe-card" onclick="viewRecipe(11)">
+      <img class="card-img" src="https://pupswithchopsticks.com/wp-content/uploads/tom-yum-goong-thumbnail-500x500.jpg" alt="Tom Yum Glass Noodles" loading="lazy" onerror="this.style.display='none'">
       <div class="card-top">
-        <div class="card-number">11</div>
+        <div class="card-number">10</div>
         <div class="card-emoji">🍜</div>
       </div>
       <div class="card-body">
@@ -598,10 +580,10 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
         </div>
       </div>
     </div>
-    <div class="recipe-card" onclick="viewRecipe(16)">
-      <img class="card-img" src="https://i0.wp.com/daigasikfaan.co/wp-content/uploads/2025/11/IMG_7621.jpg?resize=800%2C1000&amp;ssl=1" alt="Pork Rib &amp; Daikon Soup">
+    <div class="recipe-card" onclick="viewRecipe(12)">
+      <img class="card-img" src="https://i0.wp.com/daigasikfaan.co/wp-content/uploads/2025/11/IMG_7621.jpg?resize=800%2C1000&amp;ssl=1" alt="Pork Rib &amp; Daikon Soup" loading="lazy" onerror="this.style.display='none'">
       <div class="card-top">
-        <div class="card-number">12</div>
+        <div class="card-number">11</div>
         <div class="card-emoji">🍲</div>
       </div>
       <div class="card-body">
@@ -616,10 +598,10 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
         </div>
       </div>
     </div>
-    <div class="recipe-card" onclick="viewRecipe(17)">
-      <img class="card-img" src="https://murmursofricotta.com/wp-content/uploads/2022/01/Chicken-Congee-Chao-Ga.jpg" alt="Chicken Congee">
+    <div class="recipe-card" onclick="viewRecipe(13)">
+      <img class="card-img" src="https://murmursofricotta.com/wp-content/uploads/2022/01/Chicken-Congee-Chao-Ga.jpg" alt="Chicken Congee" loading="lazy" onerror="this.style.display='none'">
       <div class="card-top">
-        <div class="card-number">13</div>
+        <div class="card-number">12</div>
         <div class="card-emoji">🍚</div>
       </div>
       <div class="card-body">
@@ -634,10 +616,10 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
         </div>
       </div>
     </div>
-    <div class="recipe-card" onclick="viewRecipe(18)">
-      <img class="card-img" src="https://skinnyspatula.com/wp-content/uploads/2022/11/Avgolemono_Greek_Lemon_Chicken_Soup_0-735x735.jpg" alt="Greek Chicken Lemon Soup">
+    <div class="recipe-card" onclick="viewRecipe(14)">
+      <img class="card-img" src="https://skinnyspatula.com/wp-content/uploads/2022/11/Avgolemono_Greek_Lemon_Chicken_Soup_0-735x735.jpg" alt="Greek Chicken Lemon Soup" loading="lazy" onerror="this.style.display='none'">
       <div class="card-top">
-        <div class="card-number">14</div>
+        <div class="card-number">13</div>
         <div class="card-emoji">🍲</div>
       </div>
       <div class="card-body">
@@ -652,10 +634,10 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
         </div>
       </div>
     </div>
-    <div class="recipe-card" onclick="viewRecipe(11)">
-      <img class="card-img" src="https://www.cookingwithnart.com/wp-content/uploads/2019/02/Thai-Cabbage-Stir-Fry-1.jpg" alt="Stir Fried Cabbage">
+    <div class="recipe-card" onclick="viewRecipe(15)">
+      <img class="card-img" src="https://www.cookingwithnart.com/wp-content/uploads/2019/02/Thai-Cabbage-Stir-Fry-1.jpg" alt="Stir Fried Cabbage" loading="lazy" onerror="this.style.display='none'">
       <div class="card-top">
-        <div class="card-number">15</div>
+        <div class="card-number">14</div>
         <div class="card-emoji">🥬</div>
       </div>
       <div class="card-body">
@@ -670,10 +652,10 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
         </div>
       </div>
     </div>
-    <div class="recipe-card" onclick="viewRecipe(11)">
-      <img class="card-img" src="https://ychef.files.bbci.co.uk/1280x640/p0fwvtbm.jpeg" alt="Capela">
+    <div class="recipe-card" onclick="viewRecipe(16)">
+      <img class="card-img" src="https://ychef.files.bbci.co.uk/1280x640/p0fwvtbm.jpeg" alt="Capela" loading="lazy" onerror="this.style.display='none'">
       <div class="card-top">
-        <div class="card-number">16</div>
+        <div class="card-number">15</div>
         <div class="card-emoji">🍽️</div>
       </div>
       <div class="card-body">
@@ -688,10 +670,10 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
         </div>
       </div>
     </div>
-    <div class="recipe-card" onclick="viewRecipe(11)">
-      
+    <div class="recipe-card" onclick="viewRecipe(17)">
+      <img class="card-img" src="https://www.receitasdeculinaria.tv/wp-content/uploads/2021/03/bolinhos-de-coco-750x509.jpg" alt="Docinhos de Côco" loading="lazy" onerror="this.style.display='none'">
       <div class="card-top">
-        <div class="card-number">17</div>
+        <div class="card-number">16</div>
         <div class="card-emoji">🍽️</div>
       </div>
       <div class="card-body">
@@ -703,6 +685,42 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
           <div class="card-stat"><div class="stat-label">Time</div><div class="stat-val">15 mins</div></div>
           <div class="card-stat"><div class="stat-label">Serves</div><div class="stat-val">Family</div></div>
           <div class="card-stat"><div class="stat-label">Ingr.</div><div class="stat-val">5</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="recipe-card" onclick="viewRecipe(18)">
+      <img class="card-img" src="https://boyeatsworld.com.au/wp-content/uploads/2020/02/Snapseed-2.jpg" alt="Indonesian Corn Fritters" loading="lazy" onerror="this.style.display='none'">
+      <div class="card-top">
+        <div class="card-number">17</div>
+        <div class="card-emoji">🍽️</div>
+      </div>
+      <div class="card-body">
+        <div class="card-category">Sides</div>
+        <div class="card-name">Indonesian Corn Fritters</div>
+        <div class="card-tags"><span class="card-tag">indonesian</span><span class="card-tag">easy</span></div>
+        <div class="card-divider"></div>
+        <div class="card-stats">
+          <div class="card-stat"><div class="stat-label">Time</div><div class="stat-val">30 mins +</div></div>
+          <div class="card-stat"><div class="stat-label">Serves</div><div class="stat-val">20</div></div>
+          <div class="card-stat"><div class="stat-label">Ingr.</div><div class="stat-val">19</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="recipe-card" onclick="viewRecipe(19)">
+      <img class="card-img" src="https://www.sugarsaltmagic.com/wp-content/uploads/2024/01/Chicken-Filo-Pie-1FEAT.jpg" alt="Chicken Filo Pie" loading="lazy" onerror="this.style.display='none'">
+      <div class="card-top">
+        <div class="card-number">18</div>
+        <div class="card-emoji">🍽️</div>
+      </div>
+      <div class="card-body">
+        <div class="card-category">Breakfast</div>
+        <div class="card-name">Chicken Filo Pie</div>
+        <div class="card-tags"><span class="card-tag">greek</span><span class="card-tag">oven</span><span class="card-tag">onepot</span></div>
+        <div class="card-divider"></div>
+        <div class="card-stats">
+          <div class="card-stat"><div class="stat-label">Time</div><div class="stat-val">Oven 180°C  |  30 mins</div></div>
+          <div class="card-stat"><div class="stat-label">Serves</div><div class="stat-val">Family</div></div>
+          <div class="card-stat"><div class="stat-label">Ingr.</div><div class="stat-val">16</div></div>
         </div>
       </div>
     </div></div>
@@ -898,21 +916,21 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
 <!-- VIEW MODAL -->
 <div class="overlay" id="viewOverlay" onclick="closeOverlay('viewOverlay',event)">
   <div class="modal" id="viewModal">
-    <div id="viewHeroWrap"><img class="modal-hero-img" src="https://i.pinimg.com/564x/49/33/fd/4933fd92d92968dd842bdd3c4d16cbd9.jpg" alt="Capela"></div>
+    <div id="viewHeroWrap"></div>
     <div class="modal-band">
       <div class="modal-band-left">
-        <div class="modal-cat" id="viewCat">Desserts</div>
-        <div class="modal-name" id="viewName">Capela</div>
-        <div class="modal-tags" id="viewTags"><span class="modal-tag">português</span><span class="modal-tag">easy</span></div>
+        <div class="modal-cat" id="viewCat">Lunch</div>
+        <div class="modal-name" id="viewName">Lemon Herb Quinoa Salad</div>
+        <div class="modal-tags" id="viewTags"><span class="modal-tag">vegetarian</span><span class="modal-tag">healthy</span><span class="modal-tag">meal-prep</span></div>
       </div>
-      <div class="modal-emoji-large" id="viewEmoji" style="display: none;">🍽️</div>
+      <div class="modal-emoji-large" id="viewEmoji" style="display: none;">🥗</div>
       <button class="modal-close" onclick="document.getElementById('viewOverlay').classList.remove('open')">✕</button>
     </div>
-    <div class="modal-stats-bar" id="viewStats"><div class="mstat"><div class="mstat-label">Time</div><div class="mstat-val">15 mins</div></div><div class="mstat"><div class="mstat-label">Serves</div><div class="mstat-val">Family</div></div><div class="mstat"><div class="mstat-label">Ingredients</div><div class="mstat-val">5 items</div></div><div class="mstat"><div class="mstat-label">Steps</div><div class="mstat-val">6 steps</div></div></div>
+    <div class="modal-stats-bar" id="viewStats"><div class="mstat"><div class="mstat-label">Time</div><div class="mstat-val">30 mins</div></div><div class="mstat"><div class="mstat-label">Serves</div><div class="mstat-val">4</div></div><div class="mstat"><div class="mstat-label">Ingredients</div><div class="mstat-val">10 items</div></div><div class="mstat"><div class="mstat-label">Steps</div><div class="mstat-val">5 steps</div></div></div>
     <div class="modal-body">
       <div class="modal-section">
         <div class="modal-section-label">Ingredients</div>
-        <ul class="ingredients-list" id="viewIngredients"><li>250g açúcar</li><li>300g côco ralado</li><li>4 ovos</li><li>2 tbsp maizena</li><li>Papelinhos mini cupcake</li></ul>
+        <ul class="ingredients-list" id="viewIngredients"><li>1 cup quinoa</li><li>2 cups water or vegetable stock</li><li>1 cucumber, diced</li><li>200g cherry tomatoes, halved</li><li>100g feta, crumbled</li><li>½ red onion, thinly sliced</li><li>Handful mint and flat-leaf parsley</li><li>3 tbsp extra virgin olive oil</li><li>Juice of 2 lemons</li><li>Salt and cracked pepper</li></ul>
       </div>
       <div class="modal-section" id="viewVideoSection" style="display: none;">
         <div class="modal-section-label">Video</div>
@@ -921,16 +939,15 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
       <div class="modal-section">
         <div class="modal-section-label">Method</div>
         <ul class="steps-list" id="viewSteps">
-    <li class="step-item"><span class="step-n">01</span><span class="step-text">Pré aquecer o forno a 180°C.</span></li>
-    <li class="step-item"><span class="step-n">02</span><span class="step-text">Misturar os ovos com o açúcar. Não é preciso mexer muito.</span></li>
-    <li class="step-item"><span class="step-n">03</span><span class="step-text">Adicionar a maizena e misturar.</span></li>
-    <li class="step-item"><span class="step-n">04</span><span class="step-text">Envolver o côco ralado.</span></li>
-    <li class="step-item"><span class="step-n">05</span><span class="step-text">Dividir por papelinhos mini cupcake.</span></li>
-    <li class="step-item"><span class="step-n">06</span><span class="step-text">Cozer por 10 minutos.</span></li></ul>
+    <li class="step-item"><span class="step-n">01</span><span class="step-text">Rinse quinoa under cold water, then simmer with stock for 15 minutes until absorbed. Fluff and cool completely.</span></li>
+    <li class="step-item"><span class="step-n">02</span><span class="step-text">Whisk olive oil, lemon juice, salt and pepper together to make the dressing.</span></li>
+    <li class="step-item"><span class="step-n">03</span><span class="step-text">Combine cooled quinoa with cucumber, tomatoes, red onion and herbs in a large bowl.</span></li>
+    <li class="step-item"><span class="step-n">04</span><span class="step-text">Drizzle over dressing and toss well. Fold through feta last.</span></li>
+    <li class="step-item"><span class="step-n">05</span><span class="step-text">Taste, adjust seasoning and allow to sit 10 minutes before serving.</span></li></ul>
       </div>
-      <div class="modal-section" id="viewNotesSection" style="display: none;">
+      <div class="modal-section" id="viewNotesSection" style="">
         <div class="modal-section-label">Notes</div>
-        <div class="notes-text" id="viewNotes">Freeze in batches to have when you're sick. Goes well with salted roasted peanuts.</div>
+        <div class="notes-text" id="viewNotes">Best made 30 minutes ahead — the flavours deepen as it sits. Keeps refrigerated for 2 days.</div>
       </div>
       <div class="modal-footer">
         <div class="modal-footer-left">
@@ -951,8 +968,8 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
   <div class="form-modal">
     <div class="form-header">
       <div>
-        <div class="form-header-label" id="formLabel">Edit Recipe</div>
-        <h2 id="formTitle">Capela</h2>
+        <div class="form-header-label" id="formLabel">New Recipe</div>
+        <h2 id="formTitle">Add to Collection</h2>
       </div>
       <button class="modal-close" style="position:static;" onclick="document.getElementById('addOverlay').classList.remove('open')">✕</button>
     </div>
@@ -962,7 +979,7 @@ header { background: var(--black); color: var(--white); position: sticky; top: 0
         <label>Header Image URL (optional)</label>
         <input type="url" id="fImageUrl" placeholder="https://example.com/image.jpg" onchange="handleImageUrlChange()" style="font-size:0.78rem;padding:8px 0;background:none;border:none;border-bottom:1.5px solid var(--rule);color:var(--mid-grey)">
         <div class="img-preview-wrap" id="imgPreviewWrap" style="">
-          <img id="imgPreview" class="img-preview" src="https://i.pinimg.com/564x/49/33/fd/4933fd92d92968dd842bdd3c4d16cbd9.jpg" alt="Preview">
+          <img id="imgPreview" class="img-preview" src="https://www.sugarsaltmagic.com/wp-content/uploads/2024/01/Chicken-Filo-Pie-1FEAT.jpg" alt="Preview">
           <button class="img-clear-btn" onclick="clearImage()">✕ Remove image</button>
         </div>
       </div>
@@ -1028,7 +1045,7 @@ Meanwhile, warm olive oil over medium heat."></textarea>
     </div>
     <div class="form-footer">
       <button class="btn btn-ghost" onclick="document.getElementById('addOverlay').classList.remove('open')">Cancel</button>
-      <button class="btn btn-black" id="formSaveBtn" onclick="saveRecipe()">Update Recipe</button>
+      <button class="btn btn-black" id="formSaveBtn" onclick="saveRecipe()">Save Recipe</button>
     </div>
   </div>
 </div>
@@ -1070,7 +1087,7 @@ Meanwhile, warm olive oil over medium heat."></textarea>
 
 <!-- SAVE TOAST -->
 <div class="save-toast show" id="saveToast">
-  <div class="toast-text"><strong id="toastTitle">Recipe Updated</strong><span id="toastMsg">Save your book to keep changes.</span></div>
+  <div class="toast-text"><strong id="toastTitle">Recipe Added</strong><span id="toastMsg">Save your book to keep changes.</span></div>
   <button class="btn btn-black btn-sm" onclick="exportBook()">↓ Save File</button>
   <button onclick="document.getElementById('saveToast').classList.remove('show')" style="background:none;border:none;color:#666;cursor:pointer;font-size:0.9rem;padding:0 0 0 4px">✕</button>
 </div>
@@ -1080,39 +1097,6 @@ Meanwhile, warm olive oil over medium heat."></textarea>
 //  DATA
 // ─────────────────────────────────────────────
 let recipes = [
-  {
-    "id": 1,
-    "emoji": "🥞",
-    "name": "Fluffy Buttermilk Pancakes",
-    "category": "Breakfast",
-    "time": "20 mins",
-    "servings": "4",
-    "tags": [
-      "quick",
-      "vegetarian",
-      "weekend"
-    ],
-    "videoUrl": "",
-    "imageData": "",
-    "ingredients": [
-      "1 cup plain flour",
-      "1 tbsp caster sugar",
-      "1 tsp baking powder",
-      "½ tsp baking soda",
-      "¼ tsp salt",
-      "1 cup buttermilk",
-      "1 large egg",
-      "2 tbsp melted butter"
-    ],
-    "steps": [
-      "Whisk flour, sugar, baking powder, baking soda and salt together in a large bowl.",
-      "In a separate bowl, whisk buttermilk, egg and melted butter until combined.",
-      "Pour wet ingredients into dry and fold until just combined — lumps are fine and expected.",
-      "Heat a non-stick pan over medium heat and lightly butter the surface.",
-      "Pour ¼ cup batter per pancake. Cook until bubbles appear on the surface (about 2 min), then flip for 1 minute."
-    ],
-    "notes": "Let the batter rest for 5 minutes before cooking for extra fluffiness."
-  },
   {
     "id": 2,
     "emoji": "🍝",
@@ -1126,7 +1110,7 @@ let recipes = [
       "quick"
     ],
     "videoUrl": "",
-    "imageData": "",
+    "imageData": "https://www.recipetineats.com/tachyon/2023/01/Carbonara_6a.jpg",
     "ingredients": [
       "200g spaghetti",
       "100g pancetta or guanciale",
@@ -1227,7 +1211,7 @@ let recipes = [
       "caffeine"
     ],
     "videoUrl": "",
-    "imageData": "",
+    "imageData": "https://liliebakery.fr/wp-content/uploads/2022/10/Chai-latte-recette-facile-Lilie-Bakery.jpg",
     "ingredients": [
       "2 cups whole milk",
       "2 Assam black tea bags",
@@ -1254,6 +1238,7 @@ let recipes = [
     "time": "Min. 2 hours",
     "servings": "",
     "tags": [
+      "italian",
       "beef",
       "pasta",
       "mealprep"
@@ -1671,7 +1656,7 @@ let recipes = [
       "coconut"
     ],
     "videoUrl": "",
-    "imageData": "",
+    "imageData": "https://www.receitasdeculinaria.tv/wp-content/uploads/2021/03/bolinhos-de-coco-750x509.jpg",
     "ingredients": [
       "250g açúcar",
       "300g coco ralado",
@@ -1684,6 +1669,98 @@ let recipes = [
       "Adicionar a maizena e continuar a mexer.",
       "Envolver o coco ralado.",
       "Dividir por papelinhos mini cupcake."
+    ],
+    "notes": ""
+  },
+  {
+    "id": 18,
+    "emoji": "🍽️",
+    "name": "Indonesian Corn Fritters",
+    "category": "Sides",
+    "time": "30 mins +",
+    "servings": "20",
+    "tags": [
+      "indonesian",
+      "easy"
+    ],
+    "videoUrl": "",
+    "imageData": "https://boyeatsworld.com.au/wp-content/uploads/2020/02/Snapseed-2.jpg",
+    "ingredients": [
+      "[Dry ingredients]",
+      "400 g corn fresh or canned",
+      "1 cup plain flour / all purpose flour",
+      "¾ cup rice flour",
+      "10 shallots finely chopped",
+      "3 – 5 cloves garlic finely chopped",
+      "2 Thai makrut / kaffir lime leaves finely chopped",
+      "2 cabbage leaves thinly sliced",
+      "2 spring onion / green onion thinly sliced",
+      "1 tsp turmeric",
+      "Salt and pepper to taste",
+      "Sugar pinch to taste",
+      "[Wet ingredients]",
+      "300 ml water",
+      "3 eggs",
+      "[Dipping sauce options]",
+      "1 tbsp tomato sauce / ketchup",
+      "1 tbsp sriracha",
+      "1 tbsp kecap manis / sweet soy sauce"
+    ],
+    "steps": [
+      "Place all of the dry ingredients in a big bowl then give it a quick stir. Next, make a well in the middle and crack in the eggs. Slowly start to mix, adding in water little by little until it's mixed into a thin and runny batter. Note: If it's too thick, you won't get that satisfying crunch, so thinner is definitely better.",
+      "Now heat up the vegetable oil in a large frying pan or wok. You’ll know the oil is hot enough when bubbles appear around a toothpick dipped in the oil.",
+      "Drop a ladleful of batter into the hot oil (carefully!) and fry until the batter turns a mouth-watering golden brown, about 2-3 minutes each side. Feel free to deep-fry a few fritters at a time if you have the space.",
+      "When fritters are cooked, scoop them out of the oil and drain on a wire rack or paper towel. Sprinkle with salt to taste. Keep cooking until all the batter has been used up.",
+      "Serve hot and crispy with tomato sauce, chilli sauce or kecap manis."
+    ],
+    "notes": ""
+  },
+  {
+    "id": 19,
+    "emoji": "🍽️",
+    "name": "Chicken Filo Pie",
+    "category": "Breakfast",
+    "time": "Oven 180°C  |  30 mins",
+    "servings": "Family",
+    "tags": [
+      "greek",
+      "oven",
+      "onepot"
+    ],
+    "videoUrl": "https://www.tiktok.com/@kalscookingpot/video/7397496679680707873?is_from_webapp=1&sender_device=pc",
+    "imageData": "https://www.sugarsaltmagic.com/wp-content/uploads/2024/01/Chicken-Filo-Pie-1FEAT.jpg",
+    "ingredients": [
+      "1kg chicken thigh cubed",
+      "2 medium onions",
+      "Salt & pepper",
+      "1 tsp smoked paprika",
+      "1 tsp thyme",
+      "Parsley",
+      "2 garlic cloves minced",
+      "25g butter",
+      "3 tbsp flour",
+      "250ml chicken stock",
+      "1 cup cream",
+      "1/3 cup greek yoghurt",
+      "200g spinach",
+      "200g feta cheese",
+      "1 box  filo sheets",
+      "50g butter (to finish)"
+    ],
+    "steps": [
+      "Preheat over to 180°C.",
+      "Heat some oil into a oven proof pan (dutch oven) and sauté onions until golden.",
+      "Add chicken and cook until colour changes, then add the spices. Cook on high for a few minutes until the chicken juices come out. Cover and simmer for 5 minutes,",
+      "Uncover and allow chicken juices to boil and reduce.",
+      "Add butter and melt in, then add flour and stir until the sauce thickens.",
+      "Pour in chicken stock, cream and greek yoghurt.",
+      "Mix well and cook on high until consistency is thicker but pourable.",
+      "Add spinach, cover and cook on medium heat until wilted.",
+      "Remove lid, stir and reduce a little further. sauce will be slightly runny and a little darker.",
+      "Leave to cool and then crumble the feta all over.",
+      "Roll up each sheet of filo into a rose and place on top of the chicken until all covered. Brush generously with butter.",
+      "Bake on 180°C for 30 minutes, or until pastry is golden and crispy.",
+      "Serve immediately."
     ],
     "notes": ""
   }
