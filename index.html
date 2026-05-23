@@ -1,4 +1,4 @@
-<html lang="en" style="--font-scale: 1.15;"><head>
+<html lang="en" style="--font-scale: 1.2;"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0, user-scalable=yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -393,7 +393,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
       <div class="font-size-control">
         <label for="fontSizeSlider">A</label>
         <input type="range" id="fontSizeSlider" class="font-size-slider" min="0.8" max="1.4" step="0.05" value="1" oninput="setFontSize(this.value)">
-        <span class="font-size-value" id="fontSizeValue">115%</span>
+        <span class="font-size-value" id="fontSizeValue">120%</span>
       </div>
       <button class="hbtn hbtn-ghost" onclick="toggleShoppingPanel()" title="Shopping List"><span class="btn-text">List</span></button>
       <button class="hbtn hbtn-primary" onclick="openAddModal()">+ <span class="btn-text">Recipe</span></button>
@@ -405,7 +405,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
 <div class="tabs-bar" id="tabsBar">
   <div class="tabs-inner" id="tabsInner">
       <button class="tab-btn active" onclick="setTab('All')">
-        All&nbsp;<span class="tab-count">18</span>
+        All&nbsp;<span class="tab-count">19</span>
       </button>
       <button class="tab-btn " onclick="setTab('Breakfast')">
         Breakfast&nbsp;<span class="tab-count">1</span>
@@ -427,6 +427,9 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
       </button>
       <button class="tab-btn " onclick="setTab('Sides')">
         Sides&nbsp;<span class="tab-count">2</span>
+      </button>
+      <button class="tab-btn " onclick="setTab('Baking')">
+        Baking&nbsp;<span class="tab-count">1</span>
       </button></div>
   <button class="manage-cats-btn" onclick="openCatsModal()">⊞ <span class="btn-text">Categories</span></button>
 </div>
@@ -434,7 +437,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
 <main class="main">
   <div class="section-header" style="">
     <h2 class="section-title" id="sectionTitle">All Recipes</h2>
-    <span class="section-meta" id="recipeCount">18 Recipes</span>
+    <span class="section-meta" id="recipeCount">19 Recipes</span>
   </div>
   <div class="recipe-grid" id="recipeGrid" style="">
     <div class="recipe-card" onclick="viewRecipe(2)">
@@ -760,6 +763,24 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
           <div class="card-stat"><div class="stat-label">Ingr.</div><div class="stat-val">16</div></div>
         </div>
       </div>
+    </div>
+    <div class="recipe-card" onclick="viewRecipe(20)">
+      
+      <div class="card-top">
+        <div class="card-number">19</div>
+        <div class="card-emoji">🍽️</div>
+      </div>
+      <div class="card-body">
+        <div class="card-category">Baking</div>
+        <div class="card-name">Test Pages</div>
+        <div class="card-tags"><span class="card-tag">test</span></div>
+        <div class="card-divider"></div>
+        <div class="card-stats">
+          <div class="card-stat"><div class="stat-label">Time</div><div class="stat-val">1</div></div>
+          <div class="card-stat"><div class="stat-label">Serves</div><div class="stat-val">2</div></div>
+          <div class="card-stat"><div class="stat-label">Ingr.</div><div class="stat-val">3</div></div>
+        </div>
+      </div>
     </div></div>
 
   <!-- MEAL PLANNER PAGE -->
@@ -1011,8 +1032,8 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
       <div class="form-group">
         <label>Header Image URL (optional)</label>
         <input type="url" id="fImageUrl" placeholder="https://example.com/image.jpg" onchange="handleImageUrlChange()" style="font-size:0.78rem;padding:8px 0;background:none;border:none;border-bottom:1.5px solid var(--rule);color:var(--mid-grey)">
-        <div class="img-preview-wrap" id="imgPreviewWrap" style="">
-          <img id="imgPreview" class="img-preview" src="https://www.sugarsaltmagic.com/wp-content/uploads/2024/01/Chicken-Filo-Pie-1FEAT.jpg" alt="Preview">
+        <div class="img-preview-wrap" id="imgPreviewWrap" style="display: none;">
+          <img id="imgPreview" class="img-preview" src="" alt="Preview">
           <button class="img-clear-btn" onclick="clearImage()">✕ Remove image</button>
         </div>
       </div>
@@ -1128,10 +1149,8 @@ Meanwhile, warm olive oil over medium heat."></textarea>
 <div class="save-toast" id="savePasswordToast">
   <div class="toast-text">
     <strong>Password Required</strong>
-    <input id="savePasswordInput" type="password" placeholder="Enter password…"
-      style="background:none;border:none;border-bottom:1px solid #b2a995;outline:none;color:#eae5db;font-family:'Gotu',system-ui;font-size:0.78rem;width:100%;margin-top:6px;"
-      onkeydown="if(event.key==='Enter') confirmSave()">
-    <span id="savePasswordError" style="display:none;font-size:0.7rem;color:#ffb3a7;margin-top:4px;display:block;"></span>
+    <input id="savePasswordInput" type="password" placeholder="Enter password…" style="background:none;border:none;border-bottom:1px solid #b2a995;outline:none;color:#eae5db;font-family:'Gotu',system-ui;font-size:0.78rem;width:100%;margin-top:6px;" onkeydown="if(event.key==='Enter') confirmSave()">
+    <span id="savePasswordError" style="font-size: 0.7rem; color: rgb(255, 179, 167); margin-top: 4px; display: none;"></span>
   </div>
   <button onclick="confirmSave()" style="background:none;border:1px solid #b2a995;color:#b2a995;font-family:'Aboreto',system-ui;font-size:0.6rem;letter-spacing:2px;padding:6px 12px;cursor:pointer;white-space:nowrap;">OK</button>
   <button onclick="dismissSavePrompt()" style="background:none;border:none;color:#b2a995;cursor:pointer;font-size:0.9rem;padding:0 0 0 4px">✕</button>
@@ -1808,6 +1827,29 @@ let recipes = [
       "Serve immediately."
     ],
     "notes": ""
+  },
+  {
+    "id": 20,
+    "emoji": "🍽️",
+    "name": "Test Pages",
+    "category": "Baking",
+    "time": "1",
+    "servings": "2",
+    "tags": [
+      "test"
+    ],
+    "videoUrl": "",
+    "imageData": "",
+    "ingredients": [
+      "[test]",
+      "Ingredient 1",
+      "Ingredient 2"
+    ],
+    "steps": [
+      "Step 1",
+      "Step 2"
+    ],
+    "notes": "Testing pages"
   }
 ];
 
