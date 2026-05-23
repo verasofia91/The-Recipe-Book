@@ -2376,7 +2376,7 @@ function exportBook() {
     .replace(/let categories = \[[\s\S]*?\];\n\nlet nextId/, `let categories = ${JSON.stringify(categories)};\n\nlet nextId`);
   const a = document.createElement('a');
   a.href = URL.createObjectURL(new Blob([html], { type: 'text/html' }));
-  a.download = 'VeraSofia_Recipe-Book.html';
+  a.download = 'index-save.html';
   a.click();
   document.getElementById('saveToast').classList.remove('show');
 }
