@@ -71,18 +71,18 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
 .pantry-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; margin-top: 20px; }
 .pantry-item { background: white; border: 1px solid var(--rule); border-radius: 6px; padding: 16px; }
 .pantry-item-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
-.pantry-item-name { font-weight: 500; color: var(--dark-grey); }
+.pantry-item-name { font-family: 'Gotu', system-ui; font-size: 0.8rem; font-weight: 700; color: #525c50; }
 .pantry-remove { background: none; border: none; color: #c0392b; cursor: pointer; font-size: 1rem; }
-.pantry-amount { font-size: 0.9rem; color: var(--mid-grey); margin-bottom: 8px; }
+.pantry-amount {  font-family: 'Gotu', system-ui; font-size: 0.7rem; color: #746c57; margin-bottom: 8px; }
 .pantry-progress-bar { width: 100%; height: 8px; background: var(--rule); border-radius: 4px; overflow: hidden; margin-bottom: 12px; }
-.pantry-progress-fill { height: 100%; background: #27ae60; transition: width 0.3s; }
+.pantry-progress-fill { height: 100%; background: #b2a995; transition: width 0.3s; }
 .pantry-controls { display: flex; gap: 6px; margin-top: 10px; }
 .pantry-btn-small { padding: 6px 8px; font-size: 0.7rem; background: var(--black); color: white; border: none; border-radius: 3px; cursor: pointer; flex: 1; }
 .add-pantry-form { background: white; border: 1px solid var(--rule); padding: 20px; border-radius: 6px; margin-bottom: 20px; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
-.form-input { padding: 10px; border: 1px solid var(--rule); border-radius: 4px; font-size: 0.9rem; }
+.form-input { padding: 10px; border: 1px solid #b2a995; border-radius: 4px; font-family: 'Gotu', system-ui; font-size: 0.8rem; color: #525c50; }
 .form-input-full { grid-column: 1 / -1; }
-.add-pantry-btn { grid-column: 1 / -1; padding: 12px; background: var(--black); color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: 500; }
+.add-pantry-btn { grid-column: 1 / -1; padding: 12px; background: #272f26; color: #eae5db; border: none; border-radius: 4px; cursor: pointer; font-weight: 500; }
 
 @media (max-width: 768px) {
   .week-grid { grid-template-columns: 1fr; }
@@ -91,19 +91,28 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
 }
 
 /* Wine Grid */
-.wine-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; }
-.wine-card { background: white; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; display: flex; flex-direction: column; }
-.wine-image { width: 100%; height: 200px; object-fit: cover; background: var(--bg); }
-.wine-card-body { padding: 16px; flex: 1; display: flex; flex-direction: column; }
-.wine-name { font-size: 1rem; font-weight: 500; color: var(--dark-grey); margin-bottom: 4px; }
-.wine-type { font-size: 0.85rem; color: var(--mid-grey); margin-bottom: 12px; }
-.wine-meta { display: flex; justify-content: space-between; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--rule); }
-.wine-price { font-size: 0.9rem; font-weight: 500; color: var(--black); }
-.wine-vintage { font-size: 0.85rem; color: var(--mid-grey); }
-.wine-notes { font-size: 0.85rem; color: var(--dark-grey); line-height: 1.5; margin-bottom: 12px; flex: 1; white-space: pre-wrap; word-wrap: break-word; }
-.wine-actions { display: flex; gap: 8px; margin-top: auto; }
-.wine-btn { flex: 1; padding: 8px; background: var(--black); color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 0.8rem; }
-.wine-btn-delete { background: #c0392b; }
+.wine-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 60px; padding: 16px; }
+.wine-card {background: var(--white);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  border-radius: 0px;
+  border: 1px solid var(--rule);
+
+  transition: transform 0.15s ease, box-shadow 0.15s ease; }
+.wine-card:hover { transform: translateY(-6px); box-shadow: 0 10px 24px rgba(0,0,0,0.12); }
+.wine-image { width: 100%; height: 250px; object-fit: cover; display: block; border: 8px solid var(--white); box-sizing: border-box; }
+.wine-image-placeholder { width: 100%; height: 250px; background: var(--bg); border: 8px solid var(--white); box-sizing: border-box; display: flex; align-items: center; justify-content: center; font-family: 'Aboreto', system-ui; font-size: 0.55rem; letter-spacing: 2px; color: var(--light-grey); text-transform: uppercase; }
+.wine-card-body { padding: 16px 18px; flex: 1; }
+.wine-type-label { font-family: 'Gotu', system-ui; font-size: 0.55rem; letter-spacing: 2px; text-transform: uppercase; color: var(--mid-grey); margin-bottom: 4px; }
+.wine-name { font-family: 'Aboreto', system-ui; font-size: 1.1rem; font-weight: 600; line-height: 1.2; color: #525b50; margin-bottom: 8px; }
+.wine-tags { display: flex; flex-wrap: wrap; gap: 3px; margin-bottom: 10px; }
+.wine-tag { font-family: 'Gotu', system-ui; font-size: 0.55rem; letter-spacing: 1px; text-transform: none; color: var(--mid-grey); border: 0px solid var(--rule); padding: 2px 5px; }
+.wine-divider { height: 1px; background: var(--rule); margin-bottom: 8px; }
+.wine-stats { display: flex; gap: 12px; }
+.wine-stat { display: flex; flex-direction: column; gap: 1px; }
 
 /* ── TABS ── */
 .tabs-wrapper { background: #272f26; border-bottom: none; }
@@ -388,7 +397,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
       </div>
       <button class="hbtn hbtn-ghost" onclick="toggleShoppingPanel()" title="Shopping List"><span class="btn-text">List</span></button>
       <button class="hbtn hbtn-primary" onclick="openAddModal()">+ <span class="btn-text">Recipe</span></button>
-      <button class="hbtn hbtn-ghost" onclick="exportBook()" title="Save as HTML"><span class="btn-text">Save</span></button>
+      <button class="hbtn hbtn-ghost" onclick="promptAndExport()" title="Save as HTML"><span class="btn-text">Save</span></button>
     </div>
   </div>
 </header>
@@ -920,18 +929,14 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
 
       <div class="wine-grid" id="wineGrid">
     <div class="wine-card">
-      <img src="https://imagevault.skulibrary.com/ColesLiquor/NoPrefix/e2520ee2b408c79be0916bdd062e372f1423c031/images/2400/id/CLG-8258524-1.jpg" class="wine-image" alt="Oyster Bay" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22280%22 height=%22200%22%3E%3Crect fill=%22%23f0f0f0%22 width=%22280%22 height=%22200%22/%3E%3C/svg%3E'">
+      <img src="https://imagevault.skulibrary.com/ColesLiquor/NoPrefix/e2520ee2b408c79be0916bdd062e372f1423c031/images/2400/id/CLG-8258524-1.jpg" class="wine-image" alt="Oyster Bay" onerror="this.style.display='none'">
       <div class="wine-card-body">
+        <div class="wine-type-label">Chardonnay</div>
         <div class="wine-name">Oyster Bay</div>
-        <div class="wine-type">Chardonnay</div>
-        <div class="wine-meta">
-          <div class="wine-price">$23</div>
-          
-        </div>
-        <div class="wine-notes">Best. goes with everything.</div>
-        <div class="wine-actions">
-          <button onclick="editWine(1779435307655)" class="btn btn-ghost btn-sm" style="flex: 1; justify-content: center;">Edit</button>
-          <button onclick="deleteWine(1779435307655)" class="btn btn-delete btn-sm" style="flex: 1; justify-content: center;">Delete</button>
+        <div class="wine-tags"><span class="wine-tag">white</span></div>
+        <div class="wine-divider"></div>
+        <div class="wine-stats">
+          <div class="wine-stat"><div class="stat-label">Price</div><div class="stat-val">$23</div></div>
         </div>
       </div>
     </div>
@@ -1114,10 +1119,22 @@ Meanwhile, warm olive oil over medium heat."></textarea>
 </div>
 
 <!-- SAVE TOAST -->
-<div class="save-toast show" id="saveToast">
+<div class="save-toast" id="saveToast">
   <div class="toast-text"><strong id="toastTitle">Recipe Added</strong><span id="toastMsg">Save your book to keep changes.</span></div>
-  <button class="btn btn-black btn-sm" onclick="exportBook()">↓ Save File</button>
+  <button class="btn btn-black btn-sm" onclick="showSavePrompt()">↓ Save File</button>
   <button onclick="document.getElementById('saveToast').classList.remove('show')" style="background:none;border:none;color:#b2a995;cursor:pointer;font-size:0.9rem;padding:0 0 0 4px">✕</button>
+</div>
+
+<div class="save-toast" id="savePasswordToast">
+  <div class="toast-text">
+    <strong>Password Required</strong>
+    <input id="savePasswordInput" type="password" placeholder="Enter password…"
+      style="background:none;border:none;border-bottom:1px solid #b2a995;outline:none;color:#eae5db;font-family:'Gotu',system-ui;font-size:0.78rem;width:100%;margin-top:6px;"
+      onkeydown="if(event.key==='Enter') confirmSave()">
+    <span id="savePasswordError" style="display:none;font-size:0.7rem;color:#ffb3a7;margin-top:4px;display:block;"></span>
+  </div>
+  <button onclick="confirmSave()" style="background:none;border:1px solid #b2a995;color:#b2a995;font-family:'Aboreto',system-ui;font-size:0.6rem;letter-spacing:2px;padding:6px 12px;cursor:pointer;white-space:nowrap;">OK</button>
+  <button onclick="dismissSavePrompt()" style="background:none;border:none;color:#b2a995;cursor:pointer;font-size:0.9rem;padding:0 0 0 4px">✕</button>
 </div>
 
 <script>
@@ -2505,7 +2522,7 @@ function renderPantry() {
               <div class="pantry-item-header">
                 <div>
                   <div class="pantry-item-name">${item.name}</div>
-                  <div style="font-size: 0.8rem; color: var(--mid-grey); margin-top: 4px;">${item.quantity} ${item.quantityType}</div>
+                  <div style="font-family: 'Gotu', system-ui; font-size: 0.8rem; color: var(--mid-grey); margin-top: 4px;">${item.quantity} ${item.quantityType}</div>
                 </div>
                 <button class="btn btn-delete btn-sm" onclick="removePantryItem(${item.id})">Remove</button>
               </div>
@@ -2647,24 +2664,23 @@ function addWine() {
 function renderWines() {
   const items = Object.values(wines);
   if (items.length === 0) {
-    document.getElementById('wineGrid').innerHTML = '<div style="grid-column: 1/-1; padding: 40px; text-align: center; color: var(--mid-grey);">No wines yet. Add your first wine!</div>';
+    document.getElementById('wineGrid').innerHTML = '<div style="grid-column: 1/-1; padding: 40px; text-align: center; font-family: \'Gotu\', system-ui; font-size: 0.82rem; color: var(--mid-grey);">No wines yet. Add your first wine!</div>';
     return;
   }
 
   document.getElementById('wineGrid').innerHTML = items.map(wine => `
-    <div class="wine-card">
-      ${wine.imageUrl ? `<img src="${wine.imageUrl}" class="wine-image" alt="${wine.name}" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22280%22 height=%22200%22%3E%3Crect fill=%22%23f0f0f0%22 width=%22280%22 height=%22200%22/%3E%3C/svg%3E'">` : '<div class="wine-image" style="display: flex; align-items: center; justify-content: center; background: var(--bg); color: var(--mid-grey);">No image</div>'}
+    <div class="wine-card" onclick="editWine(${wine.id})">
+      ${wine.imageUrl
+        ? `<img src="${wine.imageUrl}" class="wine-image" alt="${wine.name}" onerror="this.style.display='none'">`
+        : `<div class="wine-image-placeholder">No image</div>`}
       <div class="wine-card-body">
+        <div class="wine-type-label">${wine.type}</div>
         <div class="wine-name">${wine.name}</div>
-        <div class="wine-type">${wine.type}</div>
-        <div class="wine-meta">
-          ${wine.price ? `<div class="wine-price">$${wine.price}</div>` : ''}
-          ${wine.vintage ? `<div class="wine-vintage">${wine.vintage}</div>` : ''}
-        </div>
-        ${wine.notes ? `<div class="wine-notes">${wine.notes}</div>` : ''}
-        <div class="wine-actions">
-          <button onclick="editWine(${wine.id})" class="btn btn-ghost btn-sm" style="flex: 1; justify-content: center;">Edit</button>
-          <button onclick="deleteWine(${wine.id})" class="btn btn-delete btn-sm" style="flex: 1; justify-content: center;">Delete</button>
+        ${wine.notes ? `<div class="wine-tags"><span class="wine-tag">${wine.notes}</span></div>` : ''}
+        <div class="wine-divider"></div>
+        <div class="wine-stats">
+          ${wine.price ? `<div class="wine-stat"><div class="stat-label">Price</div><div class="stat-val">$${wine.price}</div></div>` : ''}
+          ${wine.vintage ? `<div class="wine-stat"><div class="stat-label">Vintage</div><div class="stat-val">${wine.vintage}</div></div>` : ''}
         </div>
       </div>
     </div>
@@ -2673,9 +2689,16 @@ function renderWines() {
 
 function editWine(id) {
   const wine = wines[id];
-  const newNotes = prompt('Edit notes:', wine.notes);
-  if (newNotes !== null) {
-    wine.notes = newNotes;
+  const action = prompt(`"${wine.name}"\n\nType new notes and press OK, or type DELETE to remove this wine.\n\nCurrent notes: ${wine.notes || '(none)'}`);
+  if (action === null) return;
+  if (action.trim().toUpperCase() === 'DELETE') {
+    if (confirm(`Delete "${wine.name}"?`)) {
+      delete wines[id];
+      localStorage.setItem('wines', JSON.stringify(wines));
+      renderWines();
+    }
+  } else {
+    wine.notes = action.trim();
     localStorage.setItem('wines', JSON.stringify(wines));
     renderWines();
   }
@@ -2700,6 +2723,39 @@ document.getElementById('fontSizeSlider').value = savedFontScale;
 renderTabs();
 renderGrid();
 renderShoppingPanel();
+
+//PASSWORD//	
+function showSavePrompt() {
+  document.getElementById('saveToast').classList.remove('show');
+  const pt = document.getElementById('savePasswordToast');
+  pt.classList.add('show');
+  document.getElementById('savePasswordError').style.display = 'none';
+  document.getElementById('savePasswordError').textContent = '';
+  setTimeout(() => document.getElementById('savePasswordInput').focus(), 50);
+}
+
+function confirmSave() {
+  const pw = document.getElementById('savePasswordInput').value;
+  if (pw === 'Nala&Kira') {
+    dismissSavePrompt();
+    exportBook();
+  } else {
+    document.getElementById('savePasswordInput').value = '';
+    const err = document.getElementById('savePasswordError');
+    err.textContent = 'Incorrect password.';
+    err.style.display = 'block';
+    setTimeout(() => { err.style.display = 'none'; err.textContent = ''; }, 2000);
+  }
+}
+
+function dismissSavePrompt() {
+  document.getElementById('savePasswordToast').classList.remove('show');
+  document.getElementById('savePasswordInput').value = '';
+}
+
+function promptAndExport() {
+  showSavePrompt();
+}
 </script>
 
 
