@@ -1,4 +1,4 @@
-<html lang="en" style="--font-scale: 1.2;"><head>
+<html lang="en" style="--font-scale: 1.15;"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0, user-scalable=yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -255,13 +255,13 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
 /* ── SHOPPING LIST PANEL ── */
 .shopping-panel { position: fixed; right: 0; top: 0; bottom: 0; width: 340px; background: var(--white); border-left: 1px solid var(--rule); z-index: 300; transform: translateX(100%); transition: transform 0.25s ease; display: flex; flex-direction: column; }
 .shopping-panel.open { transform: translateX(0); }
-.sp-header { background: var(--black); color: var(--white); padding: 20px 22px; display: flex; align-items: center; justify-content: space-between; }
+.sp-header { background: #525c50; color: #eae5db; padding: 20px 22px; display: flex; align-items: center; justify-content: space-between; }
 .sp-title { font-family: 'Aboreto', system-ui; font-size: 0.65rem; letter-spacing: 3px; text-transform: uppercase; }
 .sp-close { background: none; border: none; color: #888; cursor: pointer; font-size: 1rem; line-height: 1; }
 .sp-close:hover { color: var(--white); }
-.sp-body { flex: 1; overflow-y: auto; padding: 20px 22px; }
+.sp-body {  background: #eae5db; flex: 1; overflow-y: auto; padding: 20px 22px; }
 .sp-empty { text-align: center; padding: 40px 0; }
-.sp-empty p { font-size: 0.8rem; color: var(--light-grey); font-weight: 300; }
+.sp-empty p { font-family: 'Gotu', system-ui; font-size: 0.8rem; color: #b2a995; line-height: 1.3; }
 .sp-recipe-block { margin-bottom: 22px; }
 .sp-recipe-name { font-family: 'Aboreto', system-ui; font-size: 0.62rem; letter-spacing: 2px; text-transform: uppercase; color: var(--mid-grey); margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid var(--rule); display: flex; align-items: center; justify-content: space-between; }
 .sp-remove-recipe { background: none; border: none; color: var(--light-grey); cursor: pointer; font-size: 0.75rem; }
@@ -271,7 +271,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
 .sp-item input[type=checkbox] { margin-top: 3px; flex-shrink: 0; accent-color: var(--black); }
 .sp-item.checked label { text-decoration: line-through; color: var(--light-grey); }
 .sp-footer { padding: 16px 22px; border-top: 1px solid var(--rule); display: flex; flex-direction: column; gap: 8px; }
-.sp-note { font-size: 0.72rem; color: var(--mid-grey); font-weight: 300; line-height: 1.5; text-align: center; }
+.sp-note { font-family: 'Gotu', system-ui; font-size: 0.72rem; color: #b2a995; font-weight: 300; line-height: 1.5; text-align: center; }
 
 /* ── FORM MODAL ── */
 .form-modal { background: #eae5db; width: 100%; max-width: 600px; max-height: 92vh; overflow-y: auto; animation: fadeUp 0.2s ease; }
@@ -393,7 +393,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
       <div class="font-size-control">
         <label for="fontSizeSlider">A</label>
         <input type="range" id="fontSizeSlider" class="font-size-slider" min="0.8" max="1.4" step="0.05" value="1" oninput="setFontSize(this.value)">
-        <span class="font-size-value" id="fontSizeValue">120%</span>
+        <span class="font-size-value" id="fontSizeValue">115%</span>
       </div>
       <button class="hbtn hbtn-ghost" onclick="toggleShoppingPanel()" title="Shopping List"><span class="btn-text">List</span></button>
       <button class="hbtn hbtn-primary" onclick="openAddModal()">+ <span class="btn-text">Recipe</span></button>
@@ -435,11 +435,11 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
 </div>
 
 <main class="main">
-  <div class="section-header" style="">
+  <div class="section-header">
     <h2 class="section-title" id="sectionTitle">All Recipes</h2>
     <span class="section-meta" id="recipeCount">19 Recipes</span>
   </div>
-  <div class="recipe-grid" id="recipeGrid" style="">
+  <div class="recipe-grid" id="recipeGrid">
     <div class="recipe-card" onclick="viewRecipe(2)">
       <img class="card-img" src="https://www.recipetineats.com/tachyon/2023/01/Carbonara_6a.jpg" alt="Classic Spaghetti Carbonara" loading="lazy" onerror="this.style.display='none'">
       <div class="card-top">
@@ -793,7 +793,12 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
       <div class="day-card">
         <div class="day-title">Monday</div>
         <div style="min-height: 100px;">
-          <div style="color: var(--mid-grey); font-size: 0.85rem;">No recipes added</div>
+          
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px; background: var(--bg); border-radius: 4px; margin-bottom: 8px; cursor: pointer;" onclick="viewRecipe(12)">
+          <div style="font-size: 0.9rem; color: var(--dark-grey);">Pork Rib &amp; Daikon Soup</div>
+          <button onclick="event.stopPropagation(); removeFromMealPlan('Monday', 12)" style="padding: 4px 8px; background: #c0392b; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 0.75rem;">Remove</button>
+        </div>
+      
         </div>
         <button onclick="addRecipeToDay('Monday')" class="btn btn-ghost">+ Add Recipe</button>
       </div>
@@ -1133,7 +1138,7 @@ Meanwhile, warm olive oil over medium heat."></textarea>
   </div>
   <div class="sp-body" id="spBody"><div class="sp-empty"><p>No items yet.<br>Open a recipe and tap<br>"Add to List".</p></div></div>
   <div class="sp-footer">
-    <button class="btn btn-black" style="width:100%;justify-content:center" onclick="exportToNotes()">Export to iPhone Notes</button>
+    <button class="btn btn-black" style="width:100%;justify-content:center" onclick="exportToNotes()">Export to Notes</button>
     <button class="btn btn-ghost btn-sm" style="width:100%;justify-content:center" onclick="clearShoppingList()">Clear List</button>
     <p class="sp-note">Tapping "Export to iPhone Notes" will open the Notes app with your list pre-filled.</p>
   </div>
@@ -2332,7 +2337,7 @@ function exportToNotes() {
   entries.forEach(([id, block]) => {
     text += `\n${block.name.toUpperCase()}\n`;
     block.items.forEach(item => {
-      text += `${item.checked ? '☑' : '☐'} ${item.text}\n`;
+      text += `• ${item.text}\n`;
     });
   });
   text += `\n─────────────\nGenerated by My Recipe Book`;
@@ -2402,8 +2407,8 @@ function renderMealPlanner() {
       const recipe = recipes.find(r => r.id == recipeId);
       return recipe ? `
         <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px; background: var(--bg); border-radius: 4px; margin-bottom: 8px; cursor: pointer;" onclick="viewRecipe(${recipe.id})">
-          <div style="font-size: 0.9rem; color: var(--dark-grey);">${recipe.name}</div>
-          <button onclick="event.stopPropagation(); removeFromMealPlan('${day}', ${recipeId})" style="padding: 4px 8px; background: #c0392b; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 0.75rem;">Remove</button>
+          <div style="font-size: 0.9rem; color: #525c50; font-family: 'Arboreto', system-ui; font-weight: 500;">${recipe.name}</div>
+          <button onclick="event.stopPropagation(); removeFromMealPlan('${day}', ${recipeId})" class="btn btn-delete btn-sm" style="padding: 4px 8px;">Remove</button>
         </div>
       ` : '';
     }).join('');
@@ -2412,7 +2417,7 @@ function renderMealPlanner() {
       <div class="day-card">
         <div class="day-title">${day}</div>
         <div style="min-height: 100px;">
-          ${dayRecipes || '<div style="color: var(--mid-grey); font-size: 0.85rem;">No recipes added</div>'}
+          ${dayRecipes || '<div style="color: var(--mid-grey); font-size: 0.85rem; font-family: \'Gotu\', system-ui;">No recipes added</div>'}
         </div>
         <button onclick="addRecipeToDay('${day}')" class="btn btn-ghost">+ Add Recipe</button>
       </div>
@@ -2762,6 +2767,8 @@ const savedFontScale = localStorage.getItem('fontScale') || '1';
 setFontSize(savedFontScale);
 document.getElementById('fontSizeSlider').value = savedFontScale;
 
+// Initialize to All Recipes page
+activeTab = 'All';
 renderTabs();
 renderGrid();
 renderShoppingPanel();
