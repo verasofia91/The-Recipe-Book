@@ -1,4 +1,4 @@
-<html lang="en" style="--font-scale: 1.15;"><head>
+<html lang="en" style="--font-scale: 1;"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0, user-scalable=yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -393,7 +393,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
       <div class="font-size-control">
         <label for="fontSizeSlider">A</label>
         <input type="range" id="fontSizeSlider" class="font-size-slider" min="0.8" max="1.4" step="0.05" value="1" oninput="setFontSize(this.value)">
-        <span class="font-size-value" id="fontSizeValue">115%</span>
+        <span class="font-size-value" id="fontSizeValue">100%</span>
       </div>
       <button class="hbtn hbtn-ghost" onclick="toggleShoppingPanel()" title="Shopping List"><span class="btn-text">List</span></button>
       <button class="hbtn hbtn-primary" onclick="openAddModal()">+ <span class="btn-text">Recipe</span></button>
@@ -414,7 +414,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
         Lunch&nbsp;<span class="tab-count">3</span>
       </button>
       <button class="tab-btn " onclick="setTab('Dinner')">
-        Dinner&nbsp;<span class="tab-count">5</span>
+        Dinner&nbsp;<span class="tab-count">6</span>
       </button>
       <button class="tab-btn " onclick="setTab('Desserts')">
         Desserts&nbsp;<span class="tab-count">3</span>
@@ -427,19 +427,16 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
       </button>
       <button class="tab-btn " onclick="setTab('Sides')">
         Sides&nbsp;<span class="tab-count">2</span>
-      </button>
-      <button class="tab-btn " onclick="setTab('Baking')">
-        Baking&nbsp;<span class="tab-count">1</span>
       </button></div>
   <button class="manage-cats-btn" onclick="openCatsModal()">⊞ <span class="btn-text">Categories</span></button>
 </div>
 
 <main class="main">
-  <div class="section-header">
+  <div class="section-header" style="">
     <h2 class="section-title" id="sectionTitle">All Recipes</h2>
     <span class="section-meta" id="recipeCount">19 Recipes</span>
   </div>
-  <div class="recipe-grid" id="recipeGrid">
+  <div class="recipe-grid" id="recipeGrid" style="">
     <div class="recipe-card" onclick="viewRecipe(2)">
       <img class="card-img" src="https://www.recipetineats.com/tachyon/2023/01/Carbonara_6a.jpg" alt="Classic Spaghetti Carbonara" loading="lazy" onerror="this.style.display='none'">
       <div class="card-top">
@@ -765,20 +762,20 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
       </div>
     </div>
     <div class="recipe-card" onclick="viewRecipe(20)">
-      
+      <img class="card-img" src="https://takestwoeggs.com/wp-content/uploads/2024/11/Air-Fryer-Crispy-Pork-Belly-3.jpg" alt="Crispy Pork Belly" loading="lazy" onerror="this.style.display='none'">
       <div class="card-top">
         <div class="card-number">19</div>
         <div class="card-emoji">🍽️</div>
       </div>
       <div class="card-body">
-        <div class="card-category">Baking</div>
-        <div class="card-name">Test Pages</div>
-        <div class="card-tags"><span class="card-tag">test</span></div>
+        <div class="card-category">Dinner</div>
+        <div class="card-name">Crispy Pork Belly</div>
+        <div class="card-tags"><span class="card-tag">chinese</span><span class="card-tag">oven</span><span class="card-tag">airfryer</span></div>
         <div class="card-divider"></div>
         <div class="card-stats">
-          <div class="card-stat"><div class="stat-label">Time</div><div class="stat-val">1</div></div>
-          <div class="card-stat"><div class="stat-label">Serves</div><div class="stat-val">2</div></div>
-          <div class="card-stat"><div class="stat-label">Ingr.</div><div class="stat-val">3</div></div>
+          <div class="card-stat"><div class="stat-label">Time</div><div class="stat-val">Overnight</div></div>
+          <div class="card-stat"><div class="stat-label">Serves</div><div class="stat-val">Family</div></div>
+          <div class="card-stat"><div class="stat-label">Ingr.</div><div class="stat-val">21</div></div>
         </div>
       </div>
     </div></div>
@@ -794,9 +791,9 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
         <div class="day-title">Monday</div>
         <div style="min-height: 100px;">
           
-        <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px; background: var(--bg); border-radius: 4px; margin-bottom: 8px; cursor: pointer;" onclick="viewRecipe(12)">
-          <div style="font-size: 0.9rem; color: var(--dark-grey);">Pork Rib &amp; Daikon Soup</div>
-          <button onclick="event.stopPropagation(); removeFromMealPlan('Monday', 12)" style="padding: 4px 8px; background: #c0392b; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 0.75rem;">Remove</button>
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px; background: var(--bg); border-radius: 4px; margin-bottom: 8px; cursor: pointer;" onclick="viewRecipe(20)">
+          <div style="font-size: 0.9rem; color: #525c50; font-family: 'Arboreto', system-ui; font-weight: 500;">Crispy Pork Belly</div>
+          <button onclick="event.stopPropagation(); removeFromMealPlan('Monday', 20)" class="btn btn-delete btn-sm" style="padding: 4px 8px;">Remove</button>
         </div>
       
         </div>
@@ -806,7 +803,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
       <div class="day-card">
         <div class="day-title">Tuesday</div>
         <div style="min-height: 100px;">
-          <div style="color: var(--mid-grey); font-size: 0.85rem;">No recipes added</div>
+          <div style="color: var(--mid-grey); font-size: 0.85rem; font-family: 'Gotu', system-ui;">No recipes added</div>
         </div>
         <button onclick="addRecipeToDay('Tuesday')" class="btn btn-ghost">+ Add Recipe</button>
       </div>
@@ -814,7 +811,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
       <div class="day-card">
         <div class="day-title">Wednesday</div>
         <div style="min-height: 100px;">
-          <div style="color: var(--mid-grey); font-size: 0.85rem;">No recipes added</div>
+          <div style="color: var(--mid-grey); font-size: 0.85rem; font-family: 'Gotu', system-ui;">No recipes added</div>
         </div>
         <button onclick="addRecipeToDay('Wednesday')" class="btn btn-ghost">+ Add Recipe</button>
       </div>
@@ -822,7 +819,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
       <div class="day-card">
         <div class="day-title">Thursday</div>
         <div style="min-height: 100px;">
-          <div style="color: var(--mid-grey); font-size: 0.85rem;">No recipes added</div>
+          <div style="color: var(--mid-grey); font-size: 0.85rem; font-family: 'Gotu', system-ui;">No recipes added</div>
         </div>
         <button onclick="addRecipeToDay('Thursday')" class="btn btn-ghost">+ Add Recipe</button>
       </div>
@@ -830,7 +827,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
       <div class="day-card">
         <div class="day-title">Friday</div>
         <div style="min-height: 100px;">
-          <div style="color: var(--mid-grey); font-size: 0.85rem;">No recipes added</div>
+          <div style="color: var(--mid-grey); font-size: 0.85rem; font-family: 'Gotu', system-ui;">No recipes added</div>
         </div>
         <button onclick="addRecipeToDay('Friday')" class="btn btn-ghost">+ Add Recipe</button>
       </div>
@@ -838,7 +835,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
       <div class="day-card">
         <div class="day-title">Saturday</div>
         <div style="min-height: 100px;">
-          <div style="color: var(--mid-grey); font-size: 0.85rem;">No recipes added</div>
+          <div style="color: var(--mid-grey); font-size: 0.85rem; font-family: 'Gotu', system-ui;">No recipes added</div>
         </div>
         <button onclick="addRecipeToDay('Saturday')" class="btn btn-ghost">+ Add Recipe</button>
       </div>
@@ -846,7 +843,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
       <div class="day-card">
         <div class="day-title">Sunday</div>
         <div style="min-height: 100px;">
-          <div style="color: var(--mid-grey); font-size: 0.85rem;">No recipes added</div>
+          <div style="color: var(--mid-grey); font-size: 0.85rem; font-family: 'Gotu', system-ui;">No recipes added</div>
         </div>
         <button onclick="addRecipeToDay('Sunday')" class="btn btn-ghost">+ Add Recipe</button>
       </div>
@@ -864,7 +861,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
         <h3 style="margin-bottom: 16px; font-size: 0.9rem; font-family: 'Aboreto', system-ui; letter-spacing: 2px; text-transform: uppercase; color: var(--mid-grey);">Add Item</h3>
         <div class="form-row">
           <input type="text" id="pantryItemName" class="form-input" placeholder="Item name (e.g., Pasta)">
-          <select id="pantryItemGroup" class="form-input"><option value="">Select group...</option><option value="new">+ Create new group</option><option value="Pantry">Pantry</option></select>
+          <select id="pantryItemGroup" class="form-input"><option value="">Select group...</option><option value="new">+ Create new group</option><option value="Freezer">Freezer</option></select>
         </div>
         <div class="form-row">
           <input type="number" id="pantryItemQuantity" class="form-input" placeholder="Quantity (e.g., 2)" step="0.01" min="1">
@@ -889,10 +886,10 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
       <div id="groupsContainer">
       <div style="margin-bottom: 30px;">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid var(--rule);">
-          <h3 style="font-size: 1rem; font-family: 'Aboreto', system-ui; letter-spacing: 2px; text-transform: uppercase; color: var(--mid-grey); margin: 0;">Pantry</h3>
+          <h3 style="font-size: 1rem; font-family: 'Aboreto', system-ui; letter-spacing: 2px; text-transform: uppercase; color: var(--mid-grey); margin: 0;">Freezer</h3>
           <div style="display: flex; gap: 8px;">
-            <button onclick="renameGroup('Pantry')" class="btn btn-ghost">Rename</button>
-            <button onclick="deleteGroup('Pantry')" class="btn btn-delete">Delete</button>
+            <button onclick="renameGroup('Freezer')" class="btn btn-ghost">Rename</button>
+            <button onclick="deleteGroup('Freezer')" class="btn btn-delete">Delete</button>
           </div>
         </div>
         <div class="pantry-grid">
@@ -900,26 +897,101 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
             <div class="pantry-item">
               <div class="pantry-item-header">
                 <div>
-                  <div class="pantry-item-name">Spaghetti</div>
-                  <div style="font-size: 0.8rem; color: var(--mid-grey); margin-top: 4px;">1 Packet</div>
+                  <div class="pantry-item-name">Pasta Bolognese</div>
+                  <div style="font-family: 'Gotu', system-ui; font-size: 0.8rem; color: var(--mid-grey); margin-top: 4px;">5 Containers</div>
                 </div>
-                <button class="btn btn-delete btn-sm" onclick="removePantryItem(1779436208808)">Remove</button>
+                <button class="btn btn-delete btn-sm" onclick="removePantryItem(1780016763824)">Remove</button>
               </div>
-              <div class="pantry-amount" style="margin-bottom: 12px;">Used: 0.5 of 1</div>
+              <div class="pantry-amount" style="margin-bottom: 12px;">Used: 0 of 5</div>
               <div class="pantry-progress-bar">
-                <div class="pantry-progress-fill" style="width: 50%"></div>
+                <div class="pantry-progress-fill" style="width: 0%"></div>
               </div>
               <div class="pantry-controls">
-                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1779436208808, -0.25)">-0.25</button>
-                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1779436208808, -0.5)">-0.5</button>
-                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1779436208808, 0.5)">+0.5</button>
-                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1779436208808, 0.25)">+0.25</button>
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780016763824, -0.25)">-0.25</button>
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780016763824, -0.5)">-0.5</button>
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780016763824, 0.5)">+0.5</button>
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780016763824, 0.25)">+0.25</button>
               </div>
               <div style="margin-top: 12px; display: flex; gap: 6px;">
-                <input type="number" id="custom-1779436208808" placeholder="Used amount" step="0.01" min="0" style="flex: 1; padding: 8px; border: 1px solid #ddd; border-radius: 3px; font-size: 0.85rem;">
-                <button onclick="setCustomQuantityUsed(1779436208808)" class="btn btn-ghost btn-sm">Set</button>
+                <input type="number" id="custom-1780016763824" placeholder="Used amount" step="0.01" min="0" style="flex: 1; padding: 8px; border: 1px solid #ddd; border-radius: 3px; font-size: 0.85rem;">
+                <button onclick="setCustomQuantityUsed(1780016763824)" class="btn btn-ghost btn-sm">Set</button>
               </div>
-              <button onclick="editItem(1779436208808)" class="btn btn-ghost" style="width: 100%; justify-content: center; margin-top: 12px;">Edit Item</button>
+              <button onclick="editItem(1780016763824)" class="btn btn-ghost" style="width: 100%; justify-content: center; margin-top: 12px;">Edit Item</button>
+            </div>
+          
+            <div class="pantry-item">
+              <div class="pantry-item-header">
+                <div>
+                  <div class="pantry-item-name">Crispy Pork Belly</div>
+                  <div style="font-family: 'Gotu', system-ui; font-size: 0.8rem; color: var(--mid-grey); margin-top: 4px;">1 Piece</div>
+                </div>
+                <button class="btn btn-delete btn-sm" onclick="removePantryItem(1780016815072)">Remove</button>
+              </div>
+              <div class="pantry-amount" style="margin-bottom: 12px;">Used: 0 of 1</div>
+              <div class="pantry-progress-bar">
+                <div class="pantry-progress-fill" style="width: 0%"></div>
+              </div>
+              <div class="pantry-controls">
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780016815072, -0.25)">-0.25</button>
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780016815072, -0.5)">-0.5</button>
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780016815072, 0.5)">+0.5</button>
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780016815072, 0.25)">+0.25</button>
+              </div>
+              <div style="margin-top: 12px; display: flex; gap: 6px;">
+                <input type="number" id="custom-1780016815072" placeholder="Used amount" step="0.01" min="0" style="flex: 1; padding: 8px; border: 1px solid #ddd; border-radius: 3px; font-size: 0.85rem;">
+                <button onclick="setCustomQuantityUsed(1780016815072)" class="btn btn-ghost btn-sm">Set</button>
+              </div>
+              <button onclick="editItem(1780016815072)" class="btn btn-ghost" style="width: 100%; justify-content: center; margin-top: 12px;">Edit Item</button>
+            </div>
+          
+            <div class="pantry-item">
+              <div class="pantry-item-header">
+                <div>
+                  <div class="pantry-item-name">Fish</div>
+                  <div style="font-family: 'Gotu', system-ui; font-size: 0.8rem; color: var(--mid-grey); margin-top: 4px;">2 Whole</div>
+                </div>
+                <button class="btn btn-delete btn-sm" onclick="removePantryItem(1780016856028)">Remove</button>
+              </div>
+              <div class="pantry-amount" style="margin-bottom: 12px;">Used: 0 of 2</div>
+              <div class="pantry-progress-bar">
+                <div class="pantry-progress-fill" style="width: 0%"></div>
+              </div>
+              <div class="pantry-controls">
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780016856028, -0.25)">-0.25</button>
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780016856028, -0.5)">-0.5</button>
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780016856028, 0.5)">+0.5</button>
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780016856028, 0.25)">+0.25</button>
+              </div>
+              <div style="margin-top: 12px; display: flex; gap: 6px;">
+                <input type="number" id="custom-1780016856028" placeholder="Used amount" step="0.01" min="0" style="flex: 1; padding: 8px; border: 1px solid #ddd; border-radius: 3px; font-size: 0.85rem;">
+                <button onclick="setCustomQuantityUsed(1780016856028)" class="btn btn-ghost btn-sm">Set</button>
+              </div>
+              <button onclick="editItem(1780016856028)" class="btn btn-ghost" style="width: 100%; justify-content: center; margin-top: 12px;">Edit Item</button>
+            </div>
+          
+            <div class="pantry-item">
+              <div class="pantry-item-header">
+                <div>
+                  <div class="pantry-item-name">Salmon Soup</div>
+                  <div style="font-family: 'Gotu', system-ui; font-size: 0.8rem; color: var(--mid-grey); margin-top: 4px;">1 Container</div>
+                </div>
+                <button class="btn btn-delete btn-sm" onclick="removePantryItem(1780016877553)">Remove</button>
+              </div>
+              <div class="pantry-amount" style="margin-bottom: 12px;">Used: 0 of 1</div>
+              <div class="pantry-progress-bar">
+                <div class="pantry-progress-fill" style="width: 0%"></div>
+              </div>
+              <div class="pantry-controls">
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780016877553, -0.25)">-0.25</button>
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780016877553, -0.5)">-0.5</button>
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780016877553, 0.5)">+0.5</button>
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780016877553, 0.25)">+0.25</button>
+              </div>
+              <div style="margin-top: 12px; display: flex; gap: 6px;">
+                <input type="number" id="custom-1780016877553" placeholder="Used amount" step="0.01" min="0" style="flex: 1; padding: 8px; border: 1px solid #ddd; border-radius: 3px; font-size: 0.85rem;">
+                <button onclick="setCustomQuantityUsed(1780016877553)" class="btn btn-ghost btn-sm">Set</button>
+              </div>
+              <button onclick="editItem(1780016877553)" class="btn btn-ghost" style="width: 100%; justify-content: center; margin-top: 12px;">Edit Item</button>
             </div>
           
         </div>
@@ -978,18 +1050,18 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
     <div id="viewHeroWrap"></div>
     <div class="modal-band">
       <div class="modal-band-left">
-        <div class="modal-cat" id="viewCat">Lunch</div>
-        <div class="modal-name" id="viewName">Lemon Herb Quinoa Salad</div>
-        <div class="modal-tags" id="viewTags"><span class="modal-tag">vegetarian</span><span class="modal-tag">healthy</span><span class="modal-tag">meal-prep</span></div>
+        <div class="modal-cat" id="viewCat">Baking</div>
+        <div class="modal-name" id="viewName">Test Pages</div>
+        <div class="modal-tags" id="viewTags"><span class="modal-tag">test</span></div>
       </div>
-      <div class="modal-emoji-large" id="viewEmoji" style="display: none;">🥗</div>
+      <div class="modal-emoji-large" id="viewEmoji" style="display: none;">🍽️</div>
       <button class="modal-close" onclick="document.getElementById('viewOverlay').classList.remove('open')">✕</button>
     </div>
-    <div class="modal-stats-bar" id="viewStats"><div class="mstat"><div class="mstat-label">Time</div><div class="mstat-val">30 mins</div></div><div class="mstat"><div class="mstat-label">Serves</div><div class="mstat-val">4</div></div><div class="mstat"><div class="mstat-label">Ingredients</div><div class="mstat-val">10 items</div></div><div class="mstat"><div class="mstat-label">Steps</div><div class="mstat-val">5 steps</div></div></div>
+    <div class="modal-stats-bar" id="viewStats"><div class="mstat"><div class="mstat-label">Time</div><div class="mstat-val">1</div></div><div class="mstat"><div class="mstat-label">Serves</div><div class="mstat-val">2</div></div><div class="mstat"><div class="mstat-label">Ingredients</div><div class="mstat-val">3 items</div></div><div class="mstat"><div class="mstat-label">Steps</div><div class="mstat-val">2 steps</div></div></div>
     <div class="modal-body">
       <div class="modal-section">
         <div class="modal-section-label">Ingredients</div>
-        <ul class="ingredients-list" id="viewIngredients"><li>1 cup quinoa</li><li>2 cups water or vegetable stock</li><li>1 cucumber, diced</li><li>200g cherry tomatoes, halved</li><li>100g feta, crumbled</li><li>½ red onion, thinly sliced</li><li>Handful mint and flat-leaf parsley</li><li>3 tbsp extra virgin olive oil</li><li>Juice of 2 lemons</li><li>Salt and cracked pepper</li></ul>
+        <ul class="ingredients-list" id="viewIngredients"><li class="ingredient-group"><div class="ingredient-group-label">test</div><ul class="ingredient-group-items"><li>Ingredient 1</li><li>Ingredient 2</li></ul></li></ul>
       </div>
       <div class="modal-section" id="viewVideoSection" style="display: none;">
         <div class="modal-section-label">Video</div>
@@ -998,15 +1070,12 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
       <div class="modal-section">
         <div class="modal-section-label">Method</div>
         <ul class="steps-list" id="viewSteps">
-    <li class="step-item"><span class="step-n">01</span><span class="step-text">Rinse quinoa under cold water, then simmer with stock for 15 minutes until absorbed. Fluff and cool completely.</span></li>
-    <li class="step-item"><span class="step-n">02</span><span class="step-text">Whisk olive oil, lemon juice, salt and pepper together to make the dressing.</span></li>
-    <li class="step-item"><span class="step-n">03</span><span class="step-text">Combine cooled quinoa with cucumber, tomatoes, red onion and herbs in a large bowl.</span></li>
-    <li class="step-item"><span class="step-n">04</span><span class="step-text">Drizzle over dressing and toss well. Fold through feta last.</span></li>
-    <li class="step-item"><span class="step-n">05</span><span class="step-text">Taste, adjust seasoning and allow to sit 10 minutes before serving.</span></li></ul>
+    <li class="step-item"><span class="step-n">01</span><span class="step-text">Step 1</span></li>
+    <li class="step-item"><span class="step-n">02</span><span class="step-text">Step 2</span></li></ul>
       </div>
       <div class="modal-section" id="viewNotesSection" style="">
         <div class="modal-section-label">Notes</div>
-        <div class="notes-text" id="viewNotes">Best made 30 minutes ahead — the flavours deepen as it sits. Keeps refrigerated for 2 days.</div>
+        <div class="notes-text" id="viewNotes">Testing pages</div>
       </div>
       <div class="modal-footer">
         <div class="modal-footer-left">
@@ -1027,8 +1096,8 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
   <div class="form-modal">
     <div class="form-header">
       <div>
-        <div class="form-header-label" id="formLabel">New Recipe</div>
-        <h2 id="formTitle">Add to Collection</h2>
+        <div class="form-header-label" id="formLabel">Edit Recipe</div>
+        <h2 id="formTitle">Test Pages</h2>
       </div>
       <button class="modal-close" style="position:static;" onclick="document.getElementById('addOverlay').classList.remove('open')">✕</button>
     </div>
@@ -1037,8 +1106,8 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
       <div class="form-group">
         <label>Header Image URL (optional)</label>
         <input type="url" id="fImageUrl" placeholder="https://example.com/image.jpg" onchange="handleImageUrlChange()" style="font-size:0.78rem;padding:8px 0;background:none;border:none;border-bottom:1.5px solid var(--rule);color:var(--mid-grey)">
-        <div class="img-preview-wrap" id="imgPreviewWrap" style="display: none;">
-          <img id="imgPreview" class="img-preview" src="" alt="Preview">
+        <div class="img-preview-wrap" id="imgPreviewWrap" style="">
+          <img id="imgPreview" class="img-preview" src="https://takestwoeggs.com/wp-content/uploads/2024/11/Air-Fryer-Crispy-Pork-Belly-3.jpg" alt="Preview">
           <button class="img-clear-btn" onclick="clearImage()">✕ Remove image</button>
         </div>
       </div>
@@ -1104,7 +1173,7 @@ Meanwhile, warm olive oil over medium heat."></textarea>
     </div>
     <div class="form-footer">
       <button class="btn btn-ghost" onclick="document.getElementById('addOverlay').classList.remove('open')">Cancel</button>
-      <button class="btn btn-black" id="formSaveBtn" onclick="saveRecipe()">Save Recipe</button>
+      <button class="btn btn-black" id="formSaveBtn" onclick="saveRecipe()">Update Recipe</button>
     </div>
   </div>
 </div>
@@ -1146,7 +1215,7 @@ Meanwhile, warm olive oil over medium heat."></textarea>
 
 <!-- SAVE TOAST -->
 <div class="save-toast" id="saveToast">
-  <div class="toast-text"><strong id="toastTitle">Recipe Added</strong><span id="toastMsg">Save your book to keep changes.</span></div>
+  <div class="toast-text"><strong id="toastTitle">Recipe Updated</strong><span id="toastMsg">Save your book to keep changes.</span></div>
   <button class="btn btn-black btn-sm" onclick="showSavePrompt()">↓ Save File</button>
   <button onclick="document.getElementById('saveToast').classList.remove('show')" style="background:none;border:none;color:#b2a995;cursor:pointer;font-size:0.9rem;padding:0 0 0 4px">✕</button>
 </div>
@@ -1836,25 +1905,55 @@ let recipes = [
   {
     "id": 20,
     "emoji": "🍽️",
-    "name": "Test Pages",
-    "category": "Baking",
-    "time": "1",
-    "servings": "2",
+    "name": "Crispy Pork Belly",
+    "category": "Dinner",
+    "time": "Overnight",
+    "servings": "Family",
     "tags": [
-      "test"
+      "chinese",
+      "oven",
+      "airfryer"
     ],
     "videoUrl": "",
-    "imageData": "",
+    "imageData": "https://takestwoeggs.com/wp-content/uploads/2024/11/Air-Fryer-Crispy-Pork-Belly-3.jpg",
     "ingredients": [
-      "[test]",
-      "Ingredient 1",
-      "Ingredient 2"
+      "900g - 1kg pork belly",
+      "Coarse salt to cover pork belly skin",
+      "Neutral oil",
+      "[Seasoning]",
+      "2 tbsp shaoxing wine",
+      "1.5 tsp chinese 5 spice",
+      "2 tsp garlic powder",
+      "2 tsp sugar",
+      "1 tsp salt",
+      "½ tsp white pepper",
+      "White vinegar",
+      "[Dipping sauce — adjust to taste]",
+      "2 garlic — minced",
+      "1 spring onion — minced",
+      "1 small shallot — minced",
+      "1-3 red chillies — minced (depending on tolerance)",
+      "1 tbsp coriander — minced",
+      "1.5 tbsp sugar",
+      "2 tbsp fish sauce",
+      "1 lime, juiced",
+      "½ tbsp toasted rice powder"
     ],
     "steps": [
-      "Step 1",
-      "Step 2"
+      "Start by drying both sides of the pork belly with paper towels.",
+      "Make cuts on the meat part of the pork belly, making sure to not cut past the skin. This will make it easier to cut when the pork belly is finished.",
+      "Mix all the seasoning ingredients together into a loose paste. Rub all over the meat side, making sure to get in between the cuts made.",
+      "Place the pork belly skin side up, on a piece of foil, and fold to make a box, making sure the pork belly is secure. Do this on a small oven tray so you can place it directly in the oven for cooking.",
+      "Using a sharp tool, poke as many holes as you can on the skin, making sure not the poke through the fat layer. This will ensure the fat doesn't pool on the top as it renders in the oven/airfryer.",
+      "Wipe any excess moisture on the skin and brush some white vinegar on the skin. Place uncovered in the fridge overnight for best results, or for at least 8 hours.",
+      "Before cooking, remove the pork belly from the fridge at least 30 mins before hand, to allow it to come to room temperature.",
+      "Pat the skin dry with a paper towel, brush more vinegar then cover the skin with enough coarse salt.",
+      "Place into the oven/air fryer and cook for 40 mins at 170°C. Use the middle shelf for this step.",
+      "After 40 mins, scrape off all the salt (carefully so it doesn't fall on the meat), brush on some oil then cook for 20-30 minutes on broil (oven), or at 220°C (air fryer), until the skin has puffed up and is crispy. Use the top shelf.",
+      "Once cooked, remove from oven/air fryer, and allow it to rest for 10 minutes before slicing. Use a cleaver for a cleaner cut.",
+      "Serve with dipping sauce."
     ],
-    "notes": "Testing pages"
+    "notes": "Serve with rice and chinese vegetables (chinese brocolli, choy sum, pak choy)."
   }
 ];
 
