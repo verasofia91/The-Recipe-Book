@@ -2528,6 +2528,7 @@ function renderMealPlanner() {
 
 function addRecipeToDay(day) {
   const recipeSelect = document.createElement('div');
+  recipeSelect.id = 'mealPlannerOverlay';
   recipeSelect.style.cssText = 'position: fixed; inset: 0; background: rgba(0,0,0,0.75); display: flex; align-items: center; justify-content: center; z-index: 1000; padding: 20px;';
   
   const recipeOptions = recipes.map(r => `<option value="${r.id}">${r.name}</option>`).join('');
@@ -2541,7 +2542,7 @@ function addRecipeToDay(day) {
       </select>
       <div style="display: flex; gap: 10px;">
         <button onclick="confirmAddRecipe('${day}')" class="btn btn-black" style="flex: 1; justify-content: center;">Save</button>
-        <button onclick="this.closest('div').parentElement.remove()" class="btn btn-ghost" style="flex: 1; justify-content: center;">Cancel</button>
+        <button onclick="document.getElementById('mealPlannerOverlay').remove()" class="btn btn-ghost" style="flex: 1; justify-content: center;">Cancel</button>
       </div>
     </div>
   `;
