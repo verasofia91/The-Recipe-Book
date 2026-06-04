@@ -405,16 +405,10 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
 <div class="tabs-bar" id="tabsBar">
   <div class="tabs-inner" id="tabsInner">
       <button class="tab-btn active" onclick="setTab('All')">
-        All&nbsp;<span class="tab-count">19</span>
+        All&nbsp;<span class="tab-count">20</span>
       </button>
-      <button class="tab-btn " onclick="setTab('Breakfast')">
-        Breakfast&nbsp;<span class="tab-count">1</span>
-      </button>
-      <button class="tab-btn " onclick="setTab('Lunch')">
-        Lunch&nbsp;<span class="tab-count">3</span>
-      </button>
-      <button class="tab-btn " onclick="setTab('Dinner')">
-        Dinner&nbsp;<span class="tab-count">6</span>
+      <button class="tab-btn " onclick="setTab('Uncategorised')">
+        Uncategorised&nbsp;<span class="tab-count">1</span>
       </button>
       <button class="tab-btn " onclick="setTab('Desserts')">
         Desserts&nbsp;<span class="tab-count">3</span>
@@ -427,6 +421,9 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
       </button>
       <button class="tab-btn " onclick="setTab('Sides')">
         Sides&nbsp;<span class="tab-count">2</span>
+      </button>
+      <button class="tab-btn " onclick="setTab('Mains')">
+        Mains&nbsp;<span class="tab-count">10</span>
       </button></div>
   <button class="manage-cats-btn" onclick="openCatsModal()">⊞ <span class="btn-text">Categories</span></button>
 </div>
@@ -434,7 +431,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
 <main class="main">
   <div class="section-header" style="">
     <h2 class="section-title" id="sectionTitle">All Recipes</h2>
-    <span class="section-meta" id="recipeCount">19 Recipes</span>
+    <span class="section-meta" id="recipeCount">20 Recipes</span>
   </div>
   <div class="recipe-grid" id="recipeGrid" style="">
     <div class="recipe-card" onclick="viewRecipe(2)">
@@ -444,7 +441,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
         <div class="card-emoji">🍝</div>
       </div>
       <div class="card-body">
-        <div class="card-category">Dinner</div>
+        <div class="card-category">Mains</div>
         <div class="card-name">Classic Spaghetti Carbonara</div>
         <div class="card-tags"><span class="card-tag">italian</span><span class="card-tag">pasta</span><span class="card-tag">quick</span></div>
         <div class="card-divider"></div>
@@ -462,7 +459,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
         <div class="card-emoji">🥗</div>
       </div>
       <div class="card-body">
-        <div class="card-category">Lunch</div>
+        <div class="card-category">Uncategorised</div>
         <div class="card-name">Lemon Herb Quinoa Salad</div>
         <div class="card-tags"><span class="card-tag">vegetarian</span><span class="card-tag">healthy</span><span class="card-tag">meal-prep</span></div>
         <div class="card-divider"></div>
@@ -516,7 +513,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
         <div class="card-emoji">🍝</div>
       </div>
       <div class="card-body">
-        <div class="card-category">Dinner</div>
+        <div class="card-category">Mains</div>
         <div class="card-name">Bolognese Sauce</div>
         <div class="card-tags"><span class="card-tag">italian</span><span class="card-tag">beef</span><span class="card-tag">pasta</span><span class="card-tag">mealprep</span></div>
         <div class="card-divider"></div>
@@ -552,7 +549,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
         <div class="card-emoji">🦐</div>
       </div>
       <div class="card-body">
-        <div class="card-category">Dinner</div>
+        <div class="card-category">Mains</div>
         <div class="card-name">Arroz de Camarão</div>
         <div class="card-tags"><span class="card-tag">português</span><span class="card-tag">seafood</span><span class="card-tag">onepot</span><span class="card-tag">rice</span></div>
         <div class="card-divider"></div>
@@ -570,7 +567,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
         <div class="card-emoji">🍗</div>
       </div>
       <div class="card-body">
-        <div class="card-category">Dinner</div>
+        <div class="card-category">Mains</div>
         <div class="card-name">Pork Carnitas</div>
         <div class="card-tags"><span class="card-tag">mealprep</span><span class="card-tag">pressure cooker</span></div>
         <div class="card-divider"></div>
@@ -588,7 +585,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
         <div class="card-emoji">🍛</div>
       </div>
       <div class="card-body">
-        <div class="card-category">Lunch</div>
+        <div class="card-category">Mains</div>
         <div class="card-name">Ginger Scallion Steamed Chicken</div>
         <div class="card-tags"><span class="card-tag">chinese</span><span class="card-tag">steam</span><span class="card-tag">rice</span><span class="card-tag">easy</span></div>
         <div class="card-divider"></div>
@@ -606,7 +603,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
         <div class="card-emoji">🍜</div>
       </div>
       <div class="card-body">
-        <div class="card-category">Lunch</div>
+        <div class="card-category">Mains</div>
         <div class="card-name">Tom Yum Glass Noodles</div>
         <div class="card-tags"><span class="card-tag">thai</span><span class="card-tag">noodles</span><span class="card-tag">easy</span></div>
         <div class="card-divider"></div>
@@ -696,7 +693,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
         <div class="card-emoji">🍽️</div>
       </div>
       <div class="card-body">
-        <div class="card-category">Dinner</div>
+        <div class="card-category">Mains</div>
         <div class="card-name">Capela</div>
         <div class="card-tags"><span class="card-tag">macaense</span><span class="card-tag">oven</span></div>
         <div class="card-divider"></div>
@@ -750,7 +747,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
         <div class="card-emoji">🍽️</div>
       </div>
       <div class="card-body">
-        <div class="card-category">Breakfast</div>
+        <div class="card-category">Mains</div>
         <div class="card-name">Chicken Filo Pie</div>
         <div class="card-tags"><span class="card-tag">greek</span><span class="card-tag">oven</span><span class="card-tag">onepot</span></div>
         <div class="card-divider"></div>
@@ -768,13 +765,31 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
         <div class="card-emoji">🍽️</div>
       </div>
       <div class="card-body">
-        <div class="card-category">Dinner</div>
+        <div class="card-category">Mains</div>
         <div class="card-name">Crispy Pork Belly</div>
         <div class="card-tags"><span class="card-tag">chinese</span><span class="card-tag">oven</span><span class="card-tag">airfryer</span></div>
         <div class="card-divider"></div>
         <div class="card-stats">
           <div class="card-stat"><div class="stat-label">Time</div><div class="stat-val">Overnight</div></div>
           <div class="card-stat"><div class="stat-label">Serves</div><div class="stat-val">Family</div></div>
+          <div class="card-stat"><div class="stat-label">Ingr.</div><div class="stat-val">21</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="recipe-card" onclick="viewRecipe(21)">
+      <img class="card-img" src="https://justcook.butcherbox.com/wp-content/uploads/2022/02/Chinese-Pork-Meatball-Soup-480x270.jpg" alt="Chinese meatball soup" loading="lazy" onerror="this.style.display='none'">
+      <div class="card-top">
+        <div class="card-number">20</div>
+        <div class="card-emoji">🍽️</div>
+      </div>
+      <div class="card-body">
+        <div class="card-category">Mains</div>
+        <div class="card-name">Chinese meatball soup</div>
+        <div class="card-tags"><span class="card-tag">chinese</span><span class="card-tag">soup</span><span class="card-tag">comfort</span></div>
+        <div class="card-divider"></div>
+        <div class="card-stats">
+          
+          <div class="card-stat"><div class="stat-label">Serves</div><div class="stat-val">3</div></div>
           <div class="card-stat"><div class="stat-label">Ingr.</div><div class="stat-val">21</div></div>
         </div>
       </div>
@@ -790,12 +805,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
       <div class="day-card">
         <div class="day-title">Monday</div>
         <div style="min-height: 100px;">
-          
-        <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px; background: var(--bg); border-radius: 4px; margin-bottom: 8px; cursor: pointer;" onclick="viewRecipe(20)">
-          <div style="font-size: 0.9rem; color: #525c50; font-family: 'Arboreto', system-ui; font-weight: 500;">Crispy Pork Belly</div>
-          <button onclick="event.stopPropagation(); removeFromMealPlan('Monday', 20)" class="btn btn-delete btn-sm" style="padding: 4px 8px;">Remove</button>
-        </div>
-      
+          <div style="color: var(--mid-grey); font-size: 0.85rem; font-family: 'Gotu', system-ui;">No recipes added</div>
         </div>
         <button onclick="addRecipeToDay('Monday')" class="btn btn-ghost">+ Add Recipe</button>
       </div>
@@ -861,7 +871,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
         <h3 style="margin-bottom: 16px; font-size: 0.9rem; font-family: 'Aboreto', system-ui; letter-spacing: 2px; text-transform: uppercase; color: var(--mid-grey);">Add Item</h3>
         <div class="form-row">
           <input type="text" id="pantryItemName" class="form-input" placeholder="Item name (e.g., Pasta)">
-          <select id="pantryItemGroup" class="form-input"><option value="">Select group...</option><option value="new">+ Create new group</option><option value="Freezer">Freezer</option></select>
+          <select id="pantryItemGroup" class="form-input"><option value="">Select group...</option><option value="new">+ Create new group</option><option value="Freezer">Freezer</option><option value="Fridge">Fridge</option></select>
         </div>
         <div class="form-row">
           <input type="number" id="pantryItemQuantity" class="form-input" placeholder="Quantity (e.g., 2)" step="0.01" min="1">
@@ -897,76 +907,26 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
             <div class="pantry-item">
               <div class="pantry-item-header">
                 <div>
-                  <div class="pantry-item-name">Pasta Bolognese</div>
+                  <div class="pantry-item-name">Bolognese Sauce</div>
                   <div style="font-family: 'Gotu', system-ui; font-size: 0.8rem; color: var(--mid-grey); margin-top: 4px;">5 Containers</div>
                 </div>
-                <button class="btn btn-delete btn-sm" onclick="removePantryItem(1780016763824)">Remove</button>
+                <button class="btn btn-delete btn-sm" onclick="removePantryItem(1780562940875)">Remove</button>
               </div>
               <div class="pantry-amount" style="margin-bottom: 12px;">Used: 0 of 5</div>
               <div class="pantry-progress-bar">
                 <div class="pantry-progress-fill" style="width: 0%"></div>
               </div>
               <div class="pantry-controls">
-                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780016763824, -0.25)">-0.25</button>
-                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780016763824, -0.5)">-0.5</button>
-                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780016763824, 0.5)">+0.5</button>
-                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780016763824, 0.25)">+0.25</button>
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780562940875, -0.25)">-0.25</button>
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780562940875, -0.5)">-0.5</button>
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780562940875, 0.5)">+0.5</button>
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780562940875, 0.25)">+0.25</button>
               </div>
               <div style="margin-top: 12px; display: flex; gap: 6px;">
-                <input type="number" id="custom-1780016763824" placeholder="Used amount" step="0.01" min="0" style="flex: 1; padding: 8px; border: 1px solid #ddd; border-radius: 3px; font-size: 0.85rem;">
-                <button onclick="setCustomQuantityUsed(1780016763824)" class="btn btn-ghost btn-sm">Set</button>
+                <input type="number" id="custom-1780562940875" placeholder="Used amount" step="0.01" min="0" style="flex: 1; padding: 8px; border: 1px solid #ddd; border-radius: 3px; font-size: 0.85rem;">
+                <button onclick="setCustomQuantityUsed(1780562940875)" class="btn btn-ghost btn-sm">Set</button>
               </div>
-              <button onclick="editItem(1780016763824)" class="btn btn-ghost" style="width: 100%; justify-content: center; margin-top: 12px;">Edit Item</button>
-            </div>
-          
-            <div class="pantry-item">
-              <div class="pantry-item-header">
-                <div>
-                  <div class="pantry-item-name">Crispy Pork Belly</div>
-                  <div style="font-family: 'Gotu', system-ui; font-size: 0.8rem; color: var(--mid-grey); margin-top: 4px;">1 Piece</div>
-                </div>
-                <button class="btn btn-delete btn-sm" onclick="removePantryItem(1780016815072)">Remove</button>
-              </div>
-              <div class="pantry-amount" style="margin-bottom: 12px;">Used: 0 of 1</div>
-              <div class="pantry-progress-bar">
-                <div class="pantry-progress-fill" style="width: 0%"></div>
-              </div>
-              <div class="pantry-controls">
-                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780016815072, -0.25)">-0.25</button>
-                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780016815072, -0.5)">-0.5</button>
-                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780016815072, 0.5)">+0.5</button>
-                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780016815072, 0.25)">+0.25</button>
-              </div>
-              <div style="margin-top: 12px; display: flex; gap: 6px;">
-                <input type="number" id="custom-1780016815072" placeholder="Used amount" step="0.01" min="0" style="flex: 1; padding: 8px; border: 1px solid #ddd; border-radius: 3px; font-size: 0.85rem;">
-                <button onclick="setCustomQuantityUsed(1780016815072)" class="btn btn-ghost btn-sm">Set</button>
-              </div>
-              <button onclick="editItem(1780016815072)" class="btn btn-ghost" style="width: 100%; justify-content: center; margin-top: 12px;">Edit Item</button>
-            </div>
-          
-            <div class="pantry-item">
-              <div class="pantry-item-header">
-                <div>
-                  <div class="pantry-item-name">Fish</div>
-                  <div style="font-family: 'Gotu', system-ui; font-size: 0.8rem; color: var(--mid-grey); margin-top: 4px;">2 Whole</div>
-                </div>
-                <button class="btn btn-delete btn-sm" onclick="removePantryItem(1780016856028)">Remove</button>
-              </div>
-              <div class="pantry-amount" style="margin-bottom: 12px;">Used: 0 of 2</div>
-              <div class="pantry-progress-bar">
-                <div class="pantry-progress-fill" style="width: 0%"></div>
-              </div>
-              <div class="pantry-controls">
-                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780016856028, -0.25)">-0.25</button>
-                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780016856028, -0.5)">-0.5</button>
-                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780016856028, 0.5)">+0.5</button>
-                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780016856028, 0.25)">+0.25</button>
-              </div>
-              <div style="margin-top: 12px; display: flex; gap: 6px;">
-                <input type="number" id="custom-1780016856028" placeholder="Used amount" step="0.01" min="0" style="flex: 1; padding: 8px; border: 1px solid #ddd; border-radius: 3px; font-size: 0.85rem;">
-                <button onclick="setCustomQuantityUsed(1780016856028)" class="btn btn-ghost btn-sm">Set</button>
-              </div>
-              <button onclick="editItem(1780016856028)" class="btn btn-ghost" style="width: 100%; justify-content: center; margin-top: 12px;">Edit Item</button>
+              <button onclick="editItem(1780562940875)" class="btn btn-ghost" style="width: 100%; justify-content: center; margin-top: 12px;">Edit Item</button>
             </div>
           
             <div class="pantry-item">
@@ -975,23 +935,86 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
                   <div class="pantry-item-name">Salmon Soup</div>
                   <div style="font-family: 'Gotu', system-ui; font-size: 0.8rem; color: var(--mid-grey); margin-top: 4px;">1 Container</div>
                 </div>
-                <button class="btn btn-delete btn-sm" onclick="removePantryItem(1780016877553)">Remove</button>
+                <button class="btn btn-delete btn-sm" onclick="removePantryItem(1780562963529)">Remove</button>
               </div>
               <div class="pantry-amount" style="margin-bottom: 12px;">Used: 0 of 1</div>
               <div class="pantry-progress-bar">
                 <div class="pantry-progress-fill" style="width: 0%"></div>
               </div>
               <div class="pantry-controls">
-                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780016877553, -0.25)">-0.25</button>
-                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780016877553, -0.5)">-0.5</button>
-                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780016877553, 0.5)">+0.5</button>
-                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780016877553, 0.25)">+0.25</button>
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780562963529, -0.25)">-0.25</button>
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780562963529, -0.5)">-0.5</button>
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780562963529, 0.5)">+0.5</button>
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780562963529, 0.25)">+0.25</button>
               </div>
               <div style="margin-top: 12px; display: flex; gap: 6px;">
-                <input type="number" id="custom-1780016877553" placeholder="Used amount" step="0.01" min="0" style="flex: 1; padding: 8px; border: 1px solid #ddd; border-radius: 3px; font-size: 0.85rem;">
-                <button onclick="setCustomQuantityUsed(1780016877553)" class="btn btn-ghost btn-sm">Set</button>
+                <input type="number" id="custom-1780562963529" placeholder="Used amount" step="0.01" min="0" style="flex: 1; padding: 8px; border: 1px solid #ddd; border-radius: 3px; font-size: 0.85rem;">
+                <button onclick="setCustomQuantityUsed(1780562963529)" class="btn btn-ghost btn-sm">Set</button>
               </div>
-              <button onclick="editItem(1780016877553)" class="btn btn-ghost" style="width: 100%; justify-content: center; margin-top: 12px;">Edit Item</button>
+              <button onclick="editItem(1780562963529)" class="btn btn-ghost" style="width: 100%; justify-content: center; margin-top: 12px;">Edit Item</button>
+            </div>
+          
+            <div class="pantry-item">
+              <div class="pantry-item-header">
+                <div>
+                  <div class="pantry-item-name">Crispy Pork Belly</div>
+                  <div style="font-family: 'Gotu', system-ui; font-size: 0.8rem; color: var(--mid-grey); margin-top: 4px;">1 units</div>
+                </div>
+                <button class="btn btn-delete btn-sm" onclick="removePantryItem(1780563069809)">Remove</button>
+              </div>
+              <div class="pantry-amount" style="margin-bottom: 12px;">Used: 0 of 1</div>
+              <div class="pantry-progress-bar">
+                <div class="pantry-progress-fill" style="width: 0%"></div>
+              </div>
+              <div class="pantry-controls">
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780563069809, -0.25)">-0.25</button>
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780563069809, -0.5)">-0.5</button>
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780563069809, 0.5)">+0.5</button>
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780563069809, 0.25)">+0.25</button>
+              </div>
+              <div style="margin-top: 12px; display: flex; gap: 6px;">
+                <input type="number" id="custom-1780563069809" placeholder="Used amount" step="0.01" min="0" style="flex: 1; padding: 8px; border: 1px solid #ddd; border-radius: 3px; font-size: 0.85rem;">
+                <button onclick="setCustomQuantityUsed(1780563069809)" class="btn btn-ghost btn-sm">Set</button>
+              </div>
+              <button onclick="editItem(1780563069809)" class="btn btn-ghost" style="width: 100%; justify-content: center; margin-top: 12px;">Edit Item</button>
+            </div>
+          
+        </div>
+      </div>
+    
+      <div style="margin-bottom: 30px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid var(--rule);">
+          <h3 style="font-size: 1rem; font-family: 'Aboreto', system-ui; letter-spacing: 2px; text-transform: uppercase; color: var(--mid-grey); margin: 0;">Fridge</h3>
+          <div style="display: flex; gap: 8px;">
+            <button onclick="renameGroup('Fridge')" class="btn btn-ghost">Rename</button>
+            <button onclick="deleteGroup('Fridge')" class="btn btn-delete">Delete</button>
+          </div>
+        </div>
+        <div class="pantry-grid">
+          
+            <div class="pantry-item">
+              <div class="pantry-item-header">
+                <div>
+                  <div class="pantry-item-name">Chinese Broccoli</div>
+                  <div style="font-family: 'Gotu', system-ui; font-size: 0.8rem; color: var(--mid-grey); margin-top: 4px;">1 Bunch</div>
+                </div>
+                <button class="btn btn-delete btn-sm" onclick="removePantryItem(1780563139829)">Remove</button>
+              </div>
+              <div class="pantry-amount" style="margin-bottom: 12px;">Used: 0 of 1</div>
+              <div class="pantry-progress-bar">
+                <div class="pantry-progress-fill" style="width: 0%"></div>
+              </div>
+              <div class="pantry-controls">
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780563139829, -0.25)">-0.25</button>
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780563139829, -0.5)">-0.5</button>
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780563139829, 0.5)">+0.5</button>
+                <button class="btn btn-ghost btn-sm" onclick="adjustQuantityUsed(1780563139829, 0.25)">+0.25</button>
+              </div>
+              <div style="margin-top: 12px; display: flex; gap: 6px;">
+                <input type="number" id="custom-1780563139829" placeholder="Used amount" step="0.01" min="0" style="flex: 1; padding: 8px; border: 1px solid #ddd; border-radius: 3px; font-size: 0.85rem;">
+                <button onclick="setCustomQuantityUsed(1780563139829)" class="btn btn-ghost btn-sm">Set</button>
+              </div>
+              <button onclick="editItem(1780563139829)" class="btn btn-ghost" style="width: 100%; justify-content: center; margin-top: 12px;">Edit Item</button>
             </div>
           
         </div>
@@ -1047,21 +1070,21 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
 <!-- VIEW MODAL -->
 <div class="overlay" id="viewOverlay" onclick="closeOverlay('viewOverlay',event)">
   <div class="modal" id="viewModal">
-    <div id="viewHeroWrap"></div>
+    <div id="viewHeroWrap"><img class="modal-hero-img" src="https://justcook.butcherbox.com/wp-content/uploads/2022/02/Chinese-Pork-Meatball-Soup-480x270.jpg" alt="Chinese meatball soup"></div>
     <div class="modal-band">
       <div class="modal-band-left">
-        <div class="modal-cat" id="viewCat">Baking</div>
-        <div class="modal-name" id="viewName">Test Pages</div>
-        <div class="modal-tags" id="viewTags"><span class="modal-tag">test</span></div>
+        <div class="modal-cat" id="viewCat">Uncategorised</div>
+        <div class="modal-name" id="viewName">Chinese meatball soup</div>
+        <div class="modal-tags" id="viewTags"><span class="modal-tag">chinese</span><span class="modal-tag">soup</span><span class="modal-tag">comfort</span></div>
       </div>
       <div class="modal-emoji-large" id="viewEmoji" style="display: none;">🍽️</div>
       <button class="modal-close" onclick="document.getElementById('viewOverlay').classList.remove('open')">✕</button>
     </div>
-    <div class="modal-stats-bar" id="viewStats"><div class="mstat"><div class="mstat-label">Time</div><div class="mstat-val">1</div></div><div class="mstat"><div class="mstat-label">Serves</div><div class="mstat-val">2</div></div><div class="mstat"><div class="mstat-label">Ingredients</div><div class="mstat-val">3 items</div></div><div class="mstat"><div class="mstat-label">Steps</div><div class="mstat-val">2 steps</div></div></div>
+    <div class="modal-stats-bar" id="viewStats"><div class="mstat"><div class="mstat-label">Serves</div><div class="mstat-val">3</div></div><div class="mstat"><div class="mstat-label">Ingredients</div><div class="mstat-val">21 items</div></div><div class="mstat"><div class="mstat-label">Steps</div><div class="mstat-val">11 steps</div></div></div>
     <div class="modal-body">
       <div class="modal-section">
         <div class="modal-section-label">Ingredients</div>
-        <ul class="ingredients-list" id="viewIngredients"><li class="ingredient-group"><div class="ingredient-group-label">test</div><ul class="ingredient-group-items"><li>Ingredient 1</li><li>Ingredient 2</li></ul></li></ul>
+        <ul class="ingredients-list" id="viewIngredients"><li class="ingredient-group"><div class="ingredient-group-label">For the soup</div><ul class="ingredient-group-items"><li>60g carrot</li><li>40g ginger</li><li>600g Chinese leaf</li><li>3 spring onions</li><li>1.5L water</li><li>2 tbsp chicken bouillon powder</li><li>11/2 tsp white pepper</li><li>2 tosp light soy sauce</li><li>1/2 tsp sea salt flakes</li><li>1 tbsp sesame oil</li></ul></li><li class="ingredient-group"><div class="ingredient-group-label">For the meatballs</div><ul class="ingredient-group-items"><li>500g 20% fat pork mince</li><li>1/2 tsp white pepper</li><li>1 tbsp chicken bouillon powder</li><li>1 1/2 tbsp cornstarch</li><li>1 tosp light soy sauce</li><li>1 tbsp oyster sauce</li><li>1 tbsp shaoxing wine</li><li>1 tosp sesame oil</li><li>1 egg</li></ul></li></ul>
       </div>
       <div class="modal-section" id="viewVideoSection" style="display: none;">
         <div class="modal-section-label">Video</div>
@@ -1070,12 +1093,21 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
       <div class="modal-section">
         <div class="modal-section-label">Method</div>
         <ul class="steps-list" id="viewSteps">
-    <li class="step-item"><span class="step-n">01</span><span class="step-text">Step 1</span></li>
-    <li class="step-item"><span class="step-n">02</span><span class="step-text">Step 2</span></li></ul>
+    <li class="step-item"><span class="step-n">01</span><span class="step-text">Mince the carrot, smash 30g of ginger and finely mince the remaining 10g.</span></li>
+    <li class="step-item"><span class="step-n">02</span><span class="step-text">Thinly slice the Chinese leaf and separate the whites and greens of the spring onions.</span></li>
+    <li class="step-item"><span class="step-n">03</span><span class="step-text">In a bowl, combine the minced carrot, ginger and the whites spring onions with the pork mince. Add all seasonings except the egg, and mix thoroughly.</span></li>
+    <li class="step-item"><span class="step-n">04</span><span class="step-text">Then add the egg and slam the mixture down - folding and pressing it, (thislic helps create a bouncy texture).</span></li>
+    <li class="step-item"><span class="step-n">05</span><span class="step-text">Heat the smashed ginger in a wok or pot over medium heat for 1 minute to release its aroma. Add 1.5L water, white pepper, light soy sauce and sea salt flakes. Let it simmer briefly for 2 minutes.</span></li>
+    <li class="step-item"><span class="step-n">06</span><span class="step-text">Cup a portion of the meatball mix in your hand, close your fist and squeeze the meatball out - this shapes it neatly and keeps it compact.</span></li>
+    <li class="step-item"><span class="step-n">07</span><span class="step-text">fulllist is in the caption</span></li>
+    <li class="step-item"><span class="step-n">08</span><span class="step-text">Gently add the meatballs to the simmering broth. Cover with a lid and cook until the meatballs are tender and cooked through (about 8-10 minutes).</span></li>
+    <li class="step-item"><span class="step-n">09</span><span class="step-text">Gently add the meatballs to the simmering broth. Cover with a lid and cook until the meatballs are tender and cooked through about 8-19 minutes).</span></li>
+    <li class="step-item"><span class="step-n">10</span><span class="step-text">Remove the lid, add the sliced Chinese leaf and green spring onions. Simmer for 2-3 more minutes until wilted.</span></li>
+    <li class="step-item"><span class="step-n">11</span><span class="step-text">Drizzle with sesame oil before serving.</span></li></ul>
       </div>
-      <div class="modal-section" id="viewNotesSection" style="">
+      <div class="modal-section" id="viewNotesSection" style="display: none;">
         <div class="modal-section-label">Notes</div>
-        <div class="notes-text" id="viewNotes">Testing pages</div>
+        <div class="notes-text" id="viewNotes">Serve with rice and chinese vegetables (chinese brocolli, choy sum, pak choy).</div>
       </div>
       <div class="modal-footer">
         <div class="modal-footer-left">
@@ -1097,7 +1129,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
     <div class="form-header">
       <div>
         <div class="form-header-label" id="formLabel">Edit Recipe</div>
-        <h2 id="formTitle">Test Pages</h2>
+        <h2 id="formTitle">Chinese meatball soup</h2>
       </div>
       <button class="modal-close" style="position:static;" onclick="document.getElementById('addOverlay').classList.remove('open')">✕</button>
     </div>
@@ -1107,7 +1139,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
         <label>Header Image URL (optional)</label>
         <input type="url" id="fImageUrl" placeholder="https://example.com/image.jpg" onchange="handleImageUrlChange()" style="font-size:0.78rem;padding:8px 0;background:none;border:none;border-bottom:1.5px solid var(--rule);color:var(--mid-grey)">
         <div class="img-preview-wrap" id="imgPreviewWrap" style="">
-          <img id="imgPreview" class="img-preview" src="https://takestwoeggs.com/wp-content/uploads/2024/11/Air-Fryer-Crispy-Pork-Belly-3.jpg" alt="Preview">
+          <img id="imgPreview" class="img-preview" src="https://justcook.butcherbox.com/wp-content/uploads/2022/02/Chinese-Pork-Meatball-Soup-480x270.jpg" alt="Preview">
           <button class="img-clear-btn" onclick="clearImage()">✕ Remove image</button>
         </div>
       </div>
@@ -1126,7 +1158,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
       <div class="form-row">
         <div class="form-group">
           <label>Category</label>
-          <select id="fCategory"><option value="Breakfast">Breakfast</option><option value="Lunch">Lunch</option><option value="Dinner">Dinner</option><option value="Desserts">Desserts</option><option value="Snacks">Snacks</option><option value="Drinks">Drinks</option><option value="Soups">Soups</option><option value="Salads">Salads</option><option value="Sides">Sides</option><option value="Baking">Baking</option></select>
+          <select id="fCategory"><option value="Uncategorised">Uncategorised</option><option value="Breakfast">Breakfast</option><option value="Desserts">Desserts</option><option value="Snacks">Snacks</option><option value="Drinks">Drinks</option><option value="Soups">Soups</option><option value="Salads">Salads</option><option value="Sides">Sides</option><option value="Baking">Baking</option><option value="Mains">Mains</option></select>
         </div>
         <div class="form-group">
           <label>Time</label>
@@ -1188,7 +1220,97 @@ Meanwhile, warm olive oil over medium heat."></textarea>
       </div>
       <button class="modal-close" style="position:static;" onclick="document.getElementById('catsOverlay').classList.remove('open')">✕</button>
     </div>
-    <ul class="cats-list" id="catsList"></ul>
+    <ul class="cats-list" id="catsList"><li class="cat-item">
+      <div class="cat-item-name" id="cat-view-0">
+        <span>Uncategorised</span>
+        <span class="cat-count-badge">(10)</span>
+      </div>
+      <div class="cat-actions">
+        <button class="icon-btn" title="Rename" onclick="startEditCat(0,'Uncategorised')">✎</button>
+        <button class="icon-btn danger" title="Delete" onclick="deleteCat(0)">✕</button>
+      </div>
+    </li><li class="cat-item">
+      <div class="cat-item-name" id="cat-view-1">
+        <span>Breakfast</span>
+        <span class="cat-count-badge">(1)</span>
+      </div>
+      <div class="cat-actions">
+        <button class="icon-btn" title="Rename" onclick="startEditCat(1,'Breakfast')">✎</button>
+        <button class="icon-btn danger" title="Delete" onclick="deleteCat(1)">✕</button>
+      </div>
+    </li><li class="cat-item">
+      <div class="cat-item-name" id="cat-view-2">
+        <span>Desserts</span>
+        <span class="cat-count-badge">(3)</span>
+      </div>
+      <div class="cat-actions">
+        <button class="icon-btn" title="Rename" onclick="startEditCat(2,'Desserts')">✎</button>
+        <button class="icon-btn danger" title="Delete" onclick="deleteCat(2)">✕</button>
+      </div>
+    </li><li class="cat-item">
+      <div class="cat-item-name" id="cat-view-3">
+        <span>Snacks</span>
+        <span class="cat-count-badge">(0)</span>
+      </div>
+      <div class="cat-actions">
+        <button class="icon-btn" title="Rename" onclick="startEditCat(3,'Snacks')">✎</button>
+        <button class="icon-btn danger" title="Delete" onclick="deleteCat(3)">✕</button>
+      </div>
+    </li><li class="cat-item">
+      <div class="cat-item-name" id="cat-view-4">
+        <span>Drinks</span>
+        <span class="cat-count-badge">(1)</span>
+      </div>
+      <div class="cat-actions">
+        <button class="icon-btn" title="Rename" onclick="startEditCat(4,'Drinks')">✎</button>
+        <button class="icon-btn danger" title="Delete" onclick="deleteCat(4)">✕</button>
+      </div>
+    </li><li class="cat-item">
+      <div class="cat-item-name" id="cat-view-5">
+        <span>Soups</span>
+        <span class="cat-count-badge">(3)</span>
+      </div>
+      <div class="cat-actions">
+        <button class="icon-btn" title="Rename" onclick="startEditCat(5,'Soups')">✎</button>
+        <button class="icon-btn danger" title="Delete" onclick="deleteCat(5)">✕</button>
+      </div>
+    </li><li class="cat-item">
+      <div class="cat-item-name" id="cat-view-6">
+        <span>Salads</span>
+        <span class="cat-count-badge">(0)</span>
+      </div>
+      <div class="cat-actions">
+        <button class="icon-btn" title="Rename" onclick="startEditCat(6,'Salads')">✎</button>
+        <button class="icon-btn danger" title="Delete" onclick="deleteCat(6)">✕</button>
+      </div>
+    </li><li class="cat-item">
+      <div class="cat-item-name" id="cat-view-7">
+        <span>Sides</span>
+        <span class="cat-count-badge">(2)</span>
+      </div>
+      <div class="cat-actions">
+        <button class="icon-btn" title="Rename" onclick="startEditCat(7,'Sides')">✎</button>
+        <button class="icon-btn danger" title="Delete" onclick="deleteCat(7)">✕</button>
+      </div>
+    </li><li class="cat-item">
+      <div class="cat-item-name" id="cat-view-8">
+        <span>Baking</span>
+        <span class="cat-count-badge">(0)</span>
+      </div>
+      <div class="cat-actions">
+        <button class="icon-btn" title="Rename" onclick="startEditCat(8,'Baking')">✎</button>
+        <button class="icon-btn danger" title="Delete" onclick="deleteCat(8)">✕</button>
+      </div>
+    </li><li class="cat-item">
+      <div class="cat-item-name" id="cat-view-9">
+        <span>Mains</span>
+        <span class="cat-count-badge">(0)</span>
+      </div>
+      <div class="cat-actions">
+        <button class="icon-btn" title="Rename" onclick="startEditCat(9,'Mains')">✎</button>
+        <button class="icon-btn danger" title="Delete" onclick="deleteCat(9)">✕</button>
+      </div>
+    </li></ul>
     <div class="add-cat-row">
       <input class="add-cat-input" type="text" id="newCatInput" placeholder="New category name…" onkeydown="if(event.key==='Enter')addCategory()">
       <button class="btn btn-black btn-sm" onclick="addCategory()">Add</button>
@@ -1239,7 +1361,7 @@ let recipes = [
     "id": 2,
     "emoji": "🍝",
     "name": "Classic Spaghetti Carbonara",
-    "category": "Dinner",
+    "category": "Mains",
     "time": "25 mins",
     "servings": "2",
     "tags": [
@@ -1271,7 +1393,7 @@ let recipes = [
     "id": 3,
     "emoji": "🥗",
     "name": "Lemon Herb Quinoa Salad",
-    "category": "Lunch",
+    "category": "Uncategorised",
     "time": "30 mins",
     "servings": "4",
     "tags": [
@@ -1372,7 +1494,7 @@ let recipes = [
     "id": 6,
     "emoji": "🍝",
     "name": "Bolognese Sauce",
-    "category": "Dinner",
+    "category": "Mains",
     "time": "Min. 2 hours",
     "servings": "",
     "tags": [
@@ -1441,7 +1563,7 @@ let recipes = [
     "id": 8,
     "emoji": "🦐",
     "name": "Arroz de Camarão",
-    "category": "Dinner",
+    "category": "Mains",
     "time": "",
     "servings": "4-5",
     "tags": [
@@ -1484,7 +1606,7 @@ let recipes = [
     "id": 9,
     "emoji": "🍗",
     "name": "Pork Carnitas",
-    "category": "Dinner",
+    "category": "Mains",
     "time": "1 hour  |  Cook 30 mins",
     "servings": "Family",
     "tags": [
@@ -1522,7 +1644,7 @@ let recipes = [
     "id": 10,
     "emoji": "🍛",
     "name": "Ginger Scallion Steamed Chicken",
-    "category": "Lunch",
+    "category": "Mains",
     "time": "",
     "servings": "2",
     "tags": [
@@ -1556,7 +1678,7 @@ let recipes = [
     "id": 11,
     "emoji": "🍜",
     "name": "Tom Yum Glass Noodles",
-    "category": "Lunch",
+    "category": "Mains",
     "time": "15 mins",
     "servings": "3",
     "tags": [
@@ -1751,7 +1873,7 @@ let recipes = [
     "id": 16,
     "emoji": "🍽️",
     "name": "Capela",
-    "category": "Dinner",
+    "category": "Mains",
     "time": "+ 1 hora",
     "servings": "Family",
     "tags": [
@@ -1857,7 +1979,7 @@ let recipes = [
     "id": 19,
     "emoji": "🍽️",
     "name": "Chicken Filo Pie",
-    "category": "Breakfast",
+    "category": "Mains",
     "time": "Oven 180°C  |  30 mins",
     "servings": "Family",
     "tags": [
@@ -1906,7 +2028,7 @@ let recipes = [
     "id": 20,
     "emoji": "🍽️",
     "name": "Crispy Pork Belly",
-    "category": "Dinner",
+    "category": "Mains",
     "time": "Overnight",
     "servings": "Family",
     "tags": [
@@ -1954,6 +2076,58 @@ let recipes = [
       "Serve with dipping sauce."
     ],
     "notes": "Serve with rice and chinese vegetables (chinese brocolli, choy sum, pak choy)."
+  },
+  {
+    "id": 21,
+    "emoji": "🍽️",
+    "name": "Chinese meatball soup",
+    "category": "Mains",
+    "time": "",
+    "servings": "3",
+    "tags": [
+      "chinese",
+      "soup",
+      "comfort"
+    ],
+    "videoUrl": "",
+    "imageData": "https://justcook.butcherbox.com/wp-content/uploads/2022/02/Chinese-Pork-Meatball-Soup-480x270.jpg",
+    "ingredients": [
+      "[For the soup]",
+      "60g carrot",
+      "40g ginger",
+      "600g Chinese leaf",
+      "3 spring onions",
+      "1.5L water",
+      "2 tbsp chicken bouillon powder",
+      "11/2 tsp white pepper",
+      "2 tosp light soy sauce",
+      "1/2 tsp sea salt flakes",
+      "1 tbsp sesame oil",
+      "[For the meatballs]",
+      "500g 20% fat pork mince",
+      "1/2 tsp white pepper",
+      "1 tbsp chicken bouillon powder",
+      "1 1/2 tbsp cornstarch",
+      "1 tosp light soy sauce",
+      "1 tbsp oyster sauce",
+      "1 tbsp shaoxing wine",
+      "1 tosp sesame oil",
+      "1 egg"
+    ],
+    "steps": [
+      "Mince the carrot, smash 30g of ginger and finely mince the remaining 10g.",
+      "Thinly slice the Chinese leaf and separate the whites and greens of the spring onions.",
+      "In a bowl, combine the minced carrot, ginger and the whites spring onions with the pork mince. Add all seasonings except the egg, and mix thoroughly.",
+      "Then add the egg and slam the mixture down - folding and pressing it, (thislic helps create a bouncy texture).",
+      "Heat the smashed ginger in a wok or pot over medium heat for 1 minute to release its aroma. Add 1.5L water, white pepper, light soy sauce and sea salt flakes. Let it simmer briefly for 2 minutes.",
+      "Cup a portion of the meatball mix in your hand, close your fist and squeeze the meatball out - this shapes it neatly and keeps it compact.",
+      "fulllist is in the caption",
+      "Gently add the meatballs to the simmering broth. Cover with a lid and cook until the meatballs are tender and cooked through (about 8-10 minutes).",
+      "Gently add the meatballs to the simmering broth. Cover with a lid and cook until the meatballs are tender and cooked through about 8-19 minutes).",
+      "Remove the lid, add the sliced Chinese leaf and green spring onions. Simmer for 2-3 more minutes until wilted.",
+      "Drizzle with sesame oil before serving."
+    ],
+    "notes": ""
   }
 ];
 
@@ -2528,7 +2702,6 @@ function renderMealPlanner() {
 
 function addRecipeToDay(day) {
   const recipeSelect = document.createElement('div');
-  recipeSelect.id = 'mealPlannerOverlay';
   recipeSelect.style.cssText = 'position: fixed; inset: 0; background: rgba(0,0,0,0.75); display: flex; align-items: center; justify-content: center; z-index: 1000; padding: 20px;';
   
   const recipeOptions = recipes.map(r => `<option value="${r.id}">${r.name}</option>`).join('');
@@ -2542,7 +2715,7 @@ function addRecipeToDay(day) {
       </select>
       <div style="display: flex; gap: 10px;">
         <button onclick="confirmAddRecipe('${day}')" class="btn btn-black" style="flex: 1; justify-content: center;">Save</button>
-        <button onclick="document.getElementById('mealPlannerOverlay').remove()" class="btn btn-ghost" style="flex: 1; justify-content: center;">Cancel</button>
+        <button onclick="this.closest('div').parentElement.remove()" class="btn btn-ghost" style="flex: 1; justify-content: center;">Cancel</button>
       </div>
     </div>
   `;
