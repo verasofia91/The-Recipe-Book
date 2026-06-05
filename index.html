@@ -221,17 +221,74 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
 .ingredients-list li { font-family: 'Gotu', system-ui; font-size: 0.85rem; font-weight: 300; color: #272f26; display: flex; align-items: flex-start; gap: 10px; line-height: 1.4; }
 .ingredients-list li::before { content: '—'; color: #b2a995; flex-shrink: 0; }
 
-/* Ingredient Groups */
-.ingredient-group { grid-column: 1 / -1; list-style: none; }
+/* ── INGREDIENTS LIST ── */
+/* Outer list: 2-column grid — each cell is either a plain ingredient or a group box */
+.ingredients-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Plain ingredient items (no group) — sit directly in a grid cell */
+.ingredients-list > li {
+  font-family: 'Gotu', system-ui;
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: #272f26;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.4;
+}
+.ingredients-list > li::before { content: '—'; color: #b2a995; flex-shrink: 0; }
+
+/* ── INGREDIENT GROUP BOX ── */
+.ingredient-group {
+  list-style: none;
+  display: flex;
+  flex-direction: column; /* title on top, items below */
+  background: none;
+  border: 0px solid #d9d0c0;
+  padding: 14px 16px;
+}
 .ingredient-group::before { content: none !important; }
-.ingredient-group-label { font-family: 'Aboreto', system-ui; font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: #746c57; margin-top: 12px; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid #d9d0c0; font-weight: 600; }
-.ingredient-group-items { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; width: 100%; }
-.ingredient-group-items li { font-family: 'Gotu', system-ui; font-size: 0.85rem; font-weight: 300; color: #272f26; display: flex; align-items: flex-start; gap: 10px; line-height: 1.4; }
+
+/* Group title at the top of the box */
+.ingredient-group-label {
+  display: block;
+  font-family: 'Aboreto', system-ui;
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #746c57;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #d9d0c0;
+  font-weight: 600;
+}
+
+/* Items stacked vertically below the title */
+.ingredient-group-items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.ingredient-group-items li {
+  font-family: 'Gotu', system-ui;
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: #272f26;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.4;
+}
 .ingredient-group-items li::before { content: '—'; color: #b2a995; flex-shrink: 0; }
 
 @media (max-width: 768px) {
   .ingredients-list { grid-template-columns: 1fr; }
-  .ingredient-group-items { grid-template-columns: 1fr; }
 }
 
 
@@ -1202,6 +1259,11 @@ Meanwhile, warm olive oil over medium heat."></textarea>
         <label>Notes — optional</label>
         <textarea id="fNotes" rows="2" placeholder="Tips, substitutions, storage…"></textarea>
       </div>
+
+      <div class="form-group">
+        <label>Wine Pairings — optional</label>
+        <textarea id="fWine" rows="2" placeholder="e.g. Chardonnay, Pinot Noir…"></textarea>
+      </div>
     </div>
     <div class="form-footer">
       <button class="btn btn-ghost" onclick="document.getElementById('addOverlay').classList.remove('open')">Cancel</button>
@@ -2149,7 +2211,7 @@ function getCount(cat) {
 function renderTabs() {
   const allCats = ["All", ...categories];
   document.getElementById('tabsInner').innerHTML = allCats
-    .filter(c => c === "All" || getCount(c) > 0)
+    // Show all categories — including empty ones so newly added/renamed cats appear immediately
     .map(c => `
       <button class="tab-btn ${activeTab === c ? 'active' : ''}" onclick="setTab('${c.replace(/'/g,"\\'")}')">
         ${c}&nbsp;<span class="tab-count">${getCount(c)}</span>
@@ -2384,7 +2446,7 @@ function clearImage() {
 function openAddModal() {
   editingId = null;
   pendingImageData = '';
-  ['fName','fTime','fServings','fIngredients','fSteps','fNotes','fTags','fVideo','fImageUrl'].forEach(id => document.getElementById(id).value='');
+  ['fName','fTime','fServings','fIngredients','fSteps','fNotes','fWine','fTags','fVideo','fImageUrl'].forEach(id => document.getElementById(id).value='');
   document.getElementById('fEmoji').value = '🍽️';
   document.getElementById('imgPreviewWrap').style.display = 'none';
   document.getElementById('imgPreview').src = '';
@@ -2411,6 +2473,7 @@ function openEditModal(id) {
   document.getElementById('fIngredients').value = r.ingredients.join('\n');
   document.getElementById('fSteps').value = r.steps.join('\n');
   document.getElementById('fNotes').value = r.notes || '';
+  document.getElementById('fWine').value = r.winePairings || '';
 
   if (pendingImageData) {
     document.getElementById('imgPreview').src = pendingImageData;
@@ -2448,7 +2511,8 @@ function saveRecipe() {
     imageData: pendingImageData,
     ingredients: ings.split('\n').map(s=>s.trim()).filter(Boolean),
     steps: steps.split('\n').map(s=>s.trim()).filter(Boolean),
-    notes: document.getElementById('fNotes').value.trim()
+    notes: document.getElementById('fNotes').value.trim(),
+    winePairings: document.getElementById('fWine').value.trim()
   };
 
   if (editingId) {
