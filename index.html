@@ -464,11 +464,17 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
       <button class="tab-btn active" onclick="setTab('All')">
         All&nbsp;<span class="tab-count">20</span>
       </button>
-      <button class="tab-btn " onclick="setTab('Uncategorised')">
-        Uncategorised&nbsp;<span class="tab-count">1</span>
+      <button class="tab-btn " onclick="setTab('Mains')">
+        Mains&nbsp;<span class="tab-count">9</span>
+      </button>
+      <button class="tab-btn " onclick="setTab('Breakfast')">
+        Breakfast&nbsp;<span class="tab-count">0</span>
       </button>
       <button class="tab-btn " onclick="setTab('Desserts')">
         Desserts&nbsp;<span class="tab-count">3</span>
+      </button>
+      <button class="tab-btn " onclick="setTab('Snacks')">
+        Snacks&nbsp;<span class="tab-count">0</span>
       </button>
       <button class="tab-btn " onclick="setTab('Drinks')">
         Drinks&nbsp;<span class="tab-count">1</span>
@@ -476,11 +482,14 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
       <button class="tab-btn " onclick="setTab('Soups')">
         Soups&nbsp;<span class="tab-count">3</span>
       </button>
+      <button class="tab-btn " onclick="setTab('Salads')">
+        Salads&nbsp;<span class="tab-count">0</span>
+      </button>
       <button class="tab-btn " onclick="setTab('Sides')">
         Sides&nbsp;<span class="tab-count">2</span>
       </button>
-      <button class="tab-btn " onclick="setTab('Mains')">
-        Mains&nbsp;<span class="tab-count">10</span>
+      <button class="tab-btn " onclick="setTab('Baking')">
+        Baking&nbsp;<span class="tab-count">0</span>
       </button></div>
   <button class="manage-cats-btn" onclick="openCatsModal()">⊞ <span class="btn-text">Categories</span></button>
 </div>
@@ -577,7 +586,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
         <div class="card-stats">
           <div class="card-stat"><div class="stat-label">Time</div><div class="stat-val">Min. 2 hours</div></div>
           
-          <div class="card-stat"><div class="stat-label">Ingr.</div><div class="stat-val">11</div></div>
+          <div class="card-stat"><div class="stat-label">Ingr.</div><div class="stat-val">23</div></div>
         </div>
       </div>
     </div>
@@ -606,7 +615,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
         <div class="card-emoji">🦐</div>
       </div>
       <div class="card-body">
-        <div class="card-category">Mains</div>
+        <div class="card-category"></div>
         <div class="card-name">Arroz de Camarão</div>
         <div class="card-tags"><span class="card-tag">português</span><span class="card-tag">seafood</span><span class="card-tag">onepot</span><span class="card-tag">rice</span></div>
         <div class="card-divider"></div>
@@ -1106,15 +1115,30 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
       </div>
 
       <div class="wine-grid" id="wineGrid">
-    <div class="wine-card">
-      <img src="https://imagevault.skulibrary.com/ColesLiquor/NoPrefix/e2520ee2b408c79be0916bdd062e372f1423c031/images/2400/id/CLG-8258524-1.jpg" class="wine-image" alt="Oyster Bay" onerror="this.style.display='none'">
+    <div class="wine-card" onclick="editWine(1780628138479)">
+      <img src="https://media.danmurphys.com.au/dmo/product/904212-1.png?impolicy=PROD_LG" class="wine-image" alt="Oyster Bay" onerror="this.style.display='none'">
       <div class="wine-card-body">
         <div class="wine-type-label">Chardonnay</div>
         <div class="wine-name">Oyster Bay</div>
-        <div class="wine-tags"><span class="wine-tag">white</span></div>
+        <div class="wine-tags"><span class="wine-tag">Goes with everything. Definitely a favourite.</span></div>
         <div class="wine-divider"></div>
         <div class="wine-stats">
-          <div class="wine-stat"><div class="stat-label">Price</div><div class="stat-val">$23</div></div>
+          
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="wine-card" onclick="editWine(1780628277396)">
+      <img src="https://media.danmurphys.com.au/dmo/product/144469-1.png?impolicy=PROD_MD" class="wine-image" alt="Pepperjack" onerror="this.style.display='none'">
+      <div class="wine-card-body">
+        <div class="wine-type-label">Shiraz</div>
+        <div class="wine-name">Pepperjack</div>
+        <div class="wine-tags"><span class="wine-tag">Peppery, dark berry, smooth. Another favourite.</span></div>
+        <div class="wine-divider"></div>
+        <div class="wine-stats">
+          <div class="wine-stat"><div class="stat-label">Price</div><div class="stat-val">$20</div></div>
+          
         </div>
       </div>
     </div>
@@ -1127,21 +1151,21 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
 <!-- VIEW MODAL -->
 <div class="overlay" id="viewOverlay" onclick="closeOverlay('viewOverlay',event)">
   <div class="modal" id="viewModal">
-    <div id="viewHeroWrap"><img class="modal-hero-img" src="https://justcook.butcherbox.com/wp-content/uploads/2022/02/Chinese-Pork-Meatball-Soup-480x270.jpg" alt="Chinese meatball soup"></div>
+    <div id="viewHeroWrap"><img class="modal-hero-img" src="https://images.getrecipekit.com/20230929194112-_dkc1555_1.jpg?aspect_ratio=4:3&amp;quality=90&amp;" alt="Pork Carnitas"></div>
     <div class="modal-band">
       <div class="modal-band-left">
-        <div class="modal-cat" id="viewCat">Uncategorised</div>
-        <div class="modal-name" id="viewName">Chinese meatball soup</div>
-        <div class="modal-tags" id="viewTags"><span class="modal-tag">chinese</span><span class="modal-tag">soup</span><span class="modal-tag">comfort</span></div>
+        <div class="modal-cat" id="viewCat">Mains</div>
+        <div class="modal-name" id="viewName">Pork Carnitas</div>
+        <div class="modal-tags" id="viewTags"><span class="modal-tag">mealprep</span><span class="modal-tag">pressure cooker</span></div>
       </div>
-      <div class="modal-emoji-large" id="viewEmoji" style="display: none;">🍽️</div>
+      <div class="modal-emoji-large" id="viewEmoji" style="display: none;">🍗</div>
       <button class="modal-close" onclick="document.getElementById('viewOverlay').classList.remove('open')">✕</button>
     </div>
-    <div class="modal-stats-bar" id="viewStats"><div class="mstat"><div class="mstat-label">Serves</div><div class="mstat-val">3</div></div><div class="mstat"><div class="mstat-label">Ingredients</div><div class="mstat-val">21 items</div></div><div class="mstat"><div class="mstat-label">Steps</div><div class="mstat-val">11 steps</div></div></div>
+    <div class="modal-stats-bar" id="viewStats"><div class="mstat"><div class="mstat-label">Time</div><div class="mstat-val">1 hour  |  Cook 30 mins</div></div><div class="mstat"><div class="mstat-label">Serves</div><div class="mstat-val">Family</div></div><div class="mstat"><div class="mstat-label">Ingredients</div><div class="mstat-val">11 items</div></div><div class="mstat"><div class="mstat-label">Steps</div><div class="mstat-val">8 steps</div></div></div>
     <div class="modal-body">
       <div class="modal-section">
         <div class="modal-section-label">Ingredients</div>
-        <ul class="ingredients-list" id="viewIngredients"><li class="ingredient-group"><div class="ingredient-group-label">For the soup</div><ul class="ingredient-group-items"><li>60g carrot</li><li>40g ginger</li><li>600g Chinese leaf</li><li>3 spring onions</li><li>1.5L water</li><li>2 tbsp chicken bouillon powder</li><li>11/2 tsp white pepper</li><li>2 tosp light soy sauce</li><li>1/2 tsp sea salt flakes</li><li>1 tbsp sesame oil</li></ul></li><li class="ingredient-group"><div class="ingredient-group-label">For the meatballs</div><ul class="ingredient-group-items"><li>500g 20% fat pork mince</li><li>1/2 tsp white pepper</li><li>1 tbsp chicken bouillon powder</li><li>1 1/2 tbsp cornstarch</li><li>1 tosp light soy sauce</li><li>1 tbsp oyster sauce</li><li>1 tbsp shaoxing wine</li><li>1 tosp sesame oil</li><li>1 egg</li></ul></li></ul>
+        <ul class="ingredients-list" id="viewIngredients"><li>2kg pork shoulder - chunks</li><li>Sal &amp; pepper</li><li>1 tbsp olive oil</li><li>1 batch mojo sauce</li><li>1 cup chicken stock</li><li>6 cloves garlic</li><li>3/4 cup orange juice</li><li>1 tbsp cumin</li><li>1 tsp dried italian herbs</li><li>1 tsp salt</li><li>1 tsp pepper</li></ul>
       </div>
       <div class="modal-section" id="viewVideoSection" style="display: none;">
         <div class="modal-section-label">Video</div>
@@ -1150,21 +1174,32 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
       <div class="modal-section">
         <div class="modal-section-label">Method</div>
         <ul class="steps-list" id="viewSteps">
-    <li class="step-item"><span class="step-n">01</span><span class="step-text">Mince the carrot, smash 30g of ginger and finely mince the remaining 10g.</span></li>
-    <li class="step-item"><span class="step-n">02</span><span class="step-text">Thinly slice the Chinese leaf and separate the whites and greens of the spring onions.</span></li>
-    <li class="step-item"><span class="step-n">03</span><span class="step-text">In a bowl, combine the minced carrot, ginger and the whites spring onions with the pork mince. Add all seasonings except the egg, and mix thoroughly.</span></li>
-    <li class="step-item"><span class="step-n">04</span><span class="step-text">Then add the egg and slam the mixture down - folding and pressing it, (thislic helps create a bouncy texture).</span></li>
-    <li class="step-item"><span class="step-n">05</span><span class="step-text">Heat the smashed ginger in a wok or pot over medium heat for 1 minute to release its aroma. Add 1.5L water, white pepper, light soy sauce and sea salt flakes. Let it simmer briefly for 2 minutes.</span></li>
-    <li class="step-item"><span class="step-n">06</span><span class="step-text">Cup a portion of the meatball mix in your hand, close your fist and squeeze the meatball out - this shapes it neatly and keeps it compact.</span></li>
-    <li class="step-item"><span class="step-n">07</span><span class="step-text">fulllist is in the caption</span></li>
-    <li class="step-item"><span class="step-n">08</span><span class="step-text">Gently add the meatballs to the simmering broth. Cover with a lid and cook until the meatballs are tender and cooked through (about 8-10 minutes).</span></li>
-    <li class="step-item"><span class="step-n">09</span><span class="step-text">Gently add the meatballs to the simmering broth. Cover with a lid and cook until the meatballs are tender and cooked through about 8-19 minutes).</span></li>
-    <li class="step-item"><span class="step-n">10</span><span class="step-text">Remove the lid, add the sliced Chinese leaf and green spring onions. Simmer for 2-3 more minutes until wilted.</span></li>
-    <li class="step-item"><span class="step-n">11</span><span class="step-text">Drizzle with sesame oil before serving.</span></li></ul>
+    <li class="step-item"><span class="step-n">01</span><span class="step-text">Whisk mojo sauce ingredients in a bowl. Set aside.</span></li>
+    <li class="step-item"><span class="step-n">02</span><span class="step-text">Season pork chunks with salt &amp; pepper on all sides.</span></li>
+    <li class="step-item"><span class="step-n">03</span><span class="step-text">Set pressure cooker to "sauté". Add oil and sear pork in batches until browned on all sides. Press "cancel".</span></li>
+    <li class="step-item"><span class="step-n">04</span><span class="step-text">Add mojo sauce and toss with pork. Close lid and set vent to "sealing".</span></li>
+    <li class="step-item"><span class="step-n">05</span><span class="step-text">Cook on high for about 30 mins. Natural release 15 min.</span></li>
+    <li class="step-item"><span class="step-n">06</span><span class="step-text">Preheat broiler to high.</span></li>
+    <li class="step-item"><span class="step-n">07</span><span class="step-text">Shred pork with 2 forks. Transfer to a baking sheet. Broil for 4-5 minutes until crisping. Add half remaining juices, toss, and broil 5 minutes. Add the restg of the remaining juices and toss again.</span></li>
+    <li class="step-item"><span class="step-n">08</span><span class="step-text">Garnish with coriander and serve.</span></li></ul>
       </div>
-      <div class="modal-section" id="viewNotesSection" style="display: none;">
+      <div class="modal-section" id="viewNotesSection" style="">
         <div class="modal-section-label">Notes</div>
-        <div class="notes-text" id="viewNotes">Serve with rice and chinese vegetables (chinese brocolli, choy sum, pak choy).</div>
+        <div class="notes-text" id="viewNotes">Refrigerate 3 days or freeze up to 3 months. Good with chimichurri, soft corn tacos or rice.</div>
+      </div>
+
+      <!-- Wine pairings — shown only if recipe has pairings saved -->
+      <div class="modal-section" id="viewWineSection" style="display: none;">
+        <div class="modal-section-label">Wine Pairings</div>
+        <div id="viewWinePairings" style="display:flex; flex-wrap:wrap; gap:10px; margin-top:4px;">
+      <div style="display:flex; align-items:center; gap:10px; background:var(--white); border:1px solid var(--rule); padding:10px 14px; min-width:160px; max-width:220px;">
+        <img src="https://media.danmurphys.com.au/dmo/product/144469-1.png?impolicy=PROD_MD" alt="Pepperjack" style="width:36px; height:52px; object-fit:cover; flex-shrink:0; border:1px solid var(--rule);" onerror="this.style.display='none'">
+        <div>
+          <div style="font-family:'Gotu',system-ui; font-size:0.55rem; letter-spacing:1.5px; text-transform:uppercase; color:var(--mid-grey); margin-bottom:2px;">Shiraz</div>
+          <div style="font-family:'Aboreto',system-ui; font-size:0.82rem; color:#525b50; line-height:1.2;">Pepperjack</div>
+          
+        </div>
+      </div></div>
       </div>
       <div class="modal-footer">
         <div class="modal-footer-left">
@@ -1186,7 +1221,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
     <div class="form-header">
       <div>
         <div class="form-header-label" id="formLabel">Edit Recipe</div>
-        <h2 id="formTitle">Chinese meatball soup</h2>
+        <h2 id="formTitle">Bolognese Sauce</h2>
       </div>
       <button class="modal-close" style="position:static;" onclick="document.getElementById('addOverlay').classList.remove('open')">✕</button>
     </div>
@@ -1196,7 +1231,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
         <label>Header Image URL (optional)</label>
         <input type="url" id="fImageUrl" placeholder="https://example.com/image.jpg" onchange="handleImageUrlChange()" style="font-size:0.78rem;padding:8px 0;background:none;border:none;border-bottom:1.5px solid var(--rule);color:var(--mid-grey)">
         <div class="img-preview-wrap" id="imgPreviewWrap" style="">
-          <img id="imgPreview" class="img-preview" src="https://justcook.butcherbox.com/wp-content/uploads/2022/02/Chinese-Pork-Meatball-Soup-480x270.jpg" alt="Preview">
+          <img id="imgPreview" class="img-preview" src="https://grantourismotravels.com/wp-content/uploads/2021/11/Spaghetti-Bolognese-Recipe-Italian-Australian-Matt-Preston-Copyright-2022-Terence-Carter-Grantourismo-T.jpg" alt="Preview">
           <button class="img-clear-btn" onclick="clearImage()">✕ Remove image</button>
         </div>
       </div>
@@ -1215,7 +1250,7 @@ header { background: #ebe6dc; color: var(--white); position: sticky; top: 0; z-i
       <div class="form-row">
         <div class="form-group">
           <label>Category</label>
-          <select id="fCategory"><option value="Uncategorised">Uncategorised</option><option value="Breakfast">Breakfast</option><option value="Desserts">Desserts</option><option value="Snacks">Snacks</option><option value="Drinks">Drinks</option><option value="Soups">Soups</option><option value="Salads">Salads</option><option value="Sides">Sides</option><option value="Baking">Baking</option><option value="Mains">Mains</option></select>
+          <select id="fCategory"><option value="Mains">Mains</option><option value="Breakfast">Breakfast</option><option value="Desserts">Desserts</option><option value="Snacks">Snacks</option><option value="Drinks">Drinks</option><option value="Soups">Soups</option><option value="Salads">Salads</option><option value="Sides">Sides</option><option value="Baking">Baking</option></select>
         </div>
         <div class="form-group">
           <label>Time</label>
@@ -1261,8 +1296,11 @@ Meanwhile, warm olive oil over medium heat."></textarea>
       </div>
 
       <div class="form-group">
-        <label>Wine Pairings — optional</label>
-        <textarea id="fWine" rows="2" placeholder="e.g. Chardonnay, Pinot Noir…"></textarea>
+        <label>Wine Pairings — select from your wine library</label>
+        <!-- Multi-select dropdown — populated dynamically when the form opens -->
+        <!-- Hold Cmd (Mac) or Ctrl (Windows) to pick multiple wines -->
+        <select id="fWineList" multiple="" style="min-height:90px; font-family:'Gotu',system-ui; font-size:0.82rem; color:#525c50; background:var(--bg); border:none; border-bottom:1.5px solid #b2a995; padding:6px 0; outline:none; width:100%;"><option value="1780628138479">Oyster Bay — Chardonnay</option><option value="1780628277396" selected="">Pepperjack — Shiraz</option></select>
+        <span style="font-family:'Gotu',system-ui; font-size:0.7rem; color:var(--light-grey); margin-top:4px;">Hold Cmd (Mac) or Ctrl (Windows) to select multiple</span>
       </div>
     </div>
     <div class="form-footer">
@@ -1578,7 +1616,19 @@ let recipes = [
       "1/2 glass of red wine",
       "1/2 cube beef stock",
       "1 can diced tomatoes",
-      "1 jar passata"
+      "1 jar passata",
+      "[For larger quantity]",
+      "1kg mince beef",
+      "2 onions",
+      "5 garlic cloves",
+      "2 carrots",
+      "3 celery sticks",
+      "Basil",
+      "Parmesan rind",
+      "1 glass red wine",
+      "1 cube beef stock",
+      "1 can diced tomatoes",
+      "2 jars passata"
     ],
     "steps": [
       "Dice all vegetables and set aside. Saute onion and garlic until fragrant. Add celery and carrots.",
@@ -1589,7 +1639,10 @@ let recipes = [
       "Leave uncovered and cook for a minimum of of 2 hours. Keep checking the sauce in case it needs more water to continue cooking.",
       "Once cooked, add a teaspoon of sugar, pinch of bicarb soda (if sour), the other half of the basil, and adjust salt & pepper if needed."
     ],
-    "notes": "For larger quantity: - 1kg mince beef - 2 onions - 5 garlic cloves - 2 carrots - 3 celery sticks - Basil - Parmesan rind - 1 glass red wine - 1 cube beef stock - 1 can diced tomatoes - 2 jars passata"
+    "notes": "",
+    "winePairings": [
+      1780628277396
+    ]
   },
   {
     "id": 7,
@@ -1625,7 +1678,7 @@ let recipes = [
     "id": 8,
     "emoji": "🦐",
     "name": "Arroz de Camarão",
-    "category": "Mains",
+    "category": "",
     "time": "",
     "servings": "4-5",
     "tags": [
@@ -1662,7 +1715,10 @@ let recipes = [
       "SERVIR: Colocar tudo numa travessa larga. Finalizar com coentros.",
       "-> O arroz deve ficar com uma textura cremosa e aveludada."
     ],
-    "notes": "Fica bem com: chardonnay e pão"
+    "notes": "Fica bem com: chardonnay e pão",
+    "winePairings": [
+      1780628138479
+    ]
   },
   {
     "id": 9,
@@ -2193,7 +2249,7 @@ let recipes = [
   }
 ];
 
-let categories = ["Breakfast","Lunch","Dinner","Desserts","Snacks","Drinks","Soups","Salads","Sides","Baking"];
+let categories = ["Mains","Breakfast","Desserts","Snacks","Drinks","Soups","Salads","Sides","Baking"];
 let nextId = Math.max(...recipes.map(r => r.id), 0) + 1;
 let activeTab = "All";
 let viewingId = null;
@@ -2405,6 +2461,27 @@ function viewRecipe(id) {
   if (r.notes) { ns.style.display=''; document.getElementById('viewNotes').textContent = r.notes; }
   else { ns.style.display='none'; }
 
+  // Wine pairings — look up each saved wine ID from the wines library
+  const ws = document.getElementById('viewWineSection');
+  const pairedIds = r.winePairings || [];
+  const pairedWines = pairedIds.map(id => wines[id]).filter(Boolean);
+  if (pairedWines.length > 0) {
+    ws.style.display = '';
+    document.getElementById('viewWinePairings').innerHTML = pairedWines.map(w => `
+      <div style="display:flex; align-items:center; gap:10px; background:var(--white); border:1px solid var(--rule); padding:10px 14px; min-width:160px; max-width:220px;">
+        ${w.imageUrl
+          ? `<img src="${w.imageUrl}" alt="${w.name}" style="width:36px; height:52px; object-fit:cover; flex-shrink:0; border:1px solid var(--rule);" onerror="this.style.display='none'">`
+          : `<div style="width:36px; height:52px; background:var(--bg); flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:0.5rem; color:var(--light-grey); border:1px solid var(--rule);">—</div>`}
+        <div>
+          <div style="font-family:'Gotu',system-ui; font-size:0.55rem; letter-spacing:1.5px; text-transform:uppercase; color:var(--mid-grey); margin-bottom:2px;">${w.type}</div>
+          <div style="font-family:'Aboreto',system-ui; font-size:0.82rem; color:#525b50; line-height:1.2;">${w.name}</div>
+          ${w.vintage ? `<div style="font-family:'Gotu',system-ui; font-size:0.65rem; color:var(--light-grey); margin-top:2px;">${w.vintage}</div>` : ''}
+        </div>
+      </div>`).join('');
+  } else {
+    ws.style.display = 'none';
+  }
+
   document.getElementById('viewOverlay').classList.add('open');
 }
 
@@ -2423,6 +2500,20 @@ function deleteCurrentRecipe() {
 function populateCategorySelect() {
   const sel = document.getElementById('fCategory');
   sel.innerHTML = categories.map(c=>`<option value="${c}">${c}</option>`).join('');
+}
+
+// Populate the wine dropdown in the edit form
+// selectedIds: array of wine IDs already paired with this recipe
+function populateWineList(selectedIds) {
+  const select = document.getElementById('fWineList');
+  const wineItems = Object.values(wines);
+  if (wineItems.length === 0) {
+    select.innerHTML = `<option disabled>No wines in your library yet — add wines on the Wines page first.</option>`;
+    return;
+  }
+  select.innerHTML = wineItems.map(w =>
+    `<option value="${w.id}" ${selectedIds.includes(Number(w.id)) ? 'selected' : ''}>${w.name} — ${w.type}${w.vintage ? ' · ' + w.vintage : ''}</option>`
+  ).join('');
 }
 
 function handleImageUrlChange() {
@@ -2446,7 +2537,7 @@ function clearImage() {
 function openAddModal() {
   editingId = null;
   pendingImageData = '';
-  ['fName','fTime','fServings','fIngredients','fSteps','fNotes','fWine','fTags','fVideo','fImageUrl'].forEach(id => document.getElementById(id).value='');
+  ['fName','fTime','fServings','fIngredients','fSteps','fNotes','fTags','fVideo','fImageUrl'].forEach(id => document.getElementById(id).value='');
   document.getElementById('fEmoji').value = '🍽️';
   document.getElementById('imgPreviewWrap').style.display = 'none';
   document.getElementById('imgPreview').src = '';
@@ -2454,6 +2545,7 @@ function openAddModal() {
   document.getElementById('formTitle').textContent = 'Add to Collection';
   document.getElementById('formSaveBtn').textContent = 'Save Recipe';
   populateCategorySelect();
+  populateWineList([]); // no wines pre-selected for new recipe
   document.getElementById('addOverlay').classList.add('open');
 }
 
@@ -2473,7 +2565,7 @@ function openEditModal(id) {
   document.getElementById('fIngredients').value = r.ingredients.join('\n');
   document.getElementById('fSteps').value = r.steps.join('\n');
   document.getElementById('fNotes').value = r.notes || '';
-  document.getElementById('fWine').value = r.winePairings || '';
+  populateWineList(r.winePairings || []); // pre-check wines this recipe is paired with
 
   if (pendingImageData) {
     document.getElementById('imgPreview').src = pendingImageData;
@@ -2512,7 +2604,8 @@ function saveRecipe() {
     ingredients: ings.split('\n').map(s=>s.trim()).filter(Boolean),
     steps: steps.split('\n').map(s=>s.trim()).filter(Boolean),
     notes: document.getElementById('fNotes').value.trim(),
-    winePairings: document.getElementById('fWine').value.trim()
+    // Collect IDs of selected wines from the dropdown
+    winePairings: Array.from(document.getElementById('fWineList').selectedOptions).map(o => Number(o.value))
   };
 
   if (editingId) {
